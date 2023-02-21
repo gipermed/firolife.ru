@@ -1,0 +1,55 @@
+@@include('header.html', {
+	"page": "ordering"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Главная</a></li>
+			<li>Оформление заказа</li>
+		</ul>
+		<h1 class="section-title">Оформление заказа</h1>
+		@@include('ordering-steps.html', {
+			"delivery": true,
+			"confirm": true
+		})
+		<div class="ordering-section section">
+			<div class="ordering-section-title">Заказ получит:</div>
+			<div class="ordering-section-body">
+				<div class="ordering-confirm-user section">
+					<div class="ordering-confirm-user-title">Фамилия Имя</div>
+					<ul class="ordering-confirm-user-contacts">
+						<li>+7 (000) 000-00-00
+						<li>mail@mail.ru
+					</ul>
+				</div>
+				<div class="ordering-confirm-cart">
+					<div class="ordering-confirm-cart-title">Ваш заказ</div>
+					@@include('ordering-confirm-items.html')
+				</div>
+				<form action="?" class="ordering-form ordering-payment-form form">
+					<div class="ordering-payment">
+						<div class="ordering-payment-title">Способ оплаты</div>
+						<ul class="checkbox-list">
+							<li>
+								<label class="radio-label active">
+									<input type="radio" class="radio-input" name="ordering-payment" required checked>
+									<span>Онлайн оплата</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+					<div class="ordering-comment">
+						<label class="form-block">
+							<span class="form-block-title">Комментарий к заказу:</span>
+							<textarea class="input textarea" placeholder="Оставьте ваш комментарий"></textarea>
+						</label>
+					</div>
+					<div class="submit-wrapp">
+						<button class="btn btn-green submit">Подтвердить заказ&nbsp;&#62;</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</main>
+@@include('footer.html')

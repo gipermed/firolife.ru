@@ -1,0 +1,74 @@
+<div class="products-col swiper-slide">
+	<div class="product-item@@if(context.adult){ product-item-adult}">
+		<a href="#" class="add-to-favorites-btn product-item-favorites@@if(context.favorites){ active}" aria-label="Добавить в избранное" data-title="Добавить в избранное" data-title-active="Убрать из избранного">
+			<svg width="24" height="24"><use xlink:href="#icon-like"/></svg>
+		</a>
+		@@if(context.await){
+			<a href="#" class="product-item-await-remove" aria-label="Удалить из листа ожидания" data-title="Удалить из листа ожидания">
+				<svg width="24" height="24"><use xlink:href="#icon-trash"/></svg>
+			</a>
+		}
+		@@if(context.stiker){
+			<div class="product-item-stikers">
+				<div class="product-item-stiker product-item-stiker-@@stiker.type">@@stiker.text</div>
+			</div>
+		}
+		@@if(context.img === 'no'){
+			<a href="#" class="product-item-img product-item-img-no-photo">
+				@@if(context.adult){
+					<span class="product-item-img-adult">
+						<svg width="24" height="24"><use xlink:href="#icon-eye-close"/></svg>
+						<span>Товары для взрослых</span>
+					</span>
+				}
+				<img src="img/no-photo.svg" alt="" width="144">
+			</a>
+		}
+		@@if(context.img !== 'no'){
+			<a href="#" class="product-item-img cover-img">
+				@@if(context.adult){
+					<span class="product-item-img-adult">
+						<svg width="24" height="24"><use xlink:href="#icon-eye-close"/></svg>
+						<span>Товары для взрослых</span>
+					</span>
+				}
+				<img src="img/product-item-img-@@img.jpg" srcset="img/product-item-img-@@img@2x.jpg 2x" alt="">
+			</a>
+		}
+		<div class="product-item-title">
+			<a href="#">@@title</a>
+		</div>
+		<div class="product-item-foot">
+			@@if(context.reviews){
+				<div class="product-item-reviews">
+					<svg width="22" height="22"><use xlink:href="#icon-star-fill"/></svg>
+					<div class="product-item-reviews-body"><b>4.9</b></div>
+				</div>
+			}
+			<div class="product-item-prices">
+				@@if(context.sale){
+					<div class="product-item-sale">
+						<div class="product-item-sale-profit">-25%</div>
+						<div class="product-item-old-cost">175 ₽</div>
+					</div>
+				}
+				<div class="product-item-cost">@@cost</div>
+			</div>
+			@@if(!context.state){
+				<a href="#" class="btn btn-full product-item-btn add-to-cart-btn" data-text="В корзину" data-text-active="Добавлено">В корзину</a>
+			}
+			@@if(context.state === 'not-available'){
+				<a href="#" class="btn btn-full product-item-btn disabled">Нет в наличии</a>
+			}
+			@@if(context.state === 'expected'){
+				<a href="#" class="btn btn-full product-item-btn product-item-btn-expected@@if(context.await){ active}" data-text="В лист ожидания" data-text-active="В листе ожидания">
+					@@if(!context.await){В лист ожидания}
+					@@if(context.await){В листе ожидания}
+				</a>
+			}
+			@@if(context.state === 'on-order'){
+				<a href="#" class="btn btn-full product-item-btn product-item-btn-on-order">Под заказ</a>
+			}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,20 @@
+{
+  "name": "gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "imhvost",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "gulpjs/gulp#v4.0.0-alpha.3",
+    "gulp-file-include": "latest",
+    "gulp-htmlmin": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-watch": "latest",
+    "imagemin-pngquant": "latest",
+    "rimraf": "latest"
+  }
+}

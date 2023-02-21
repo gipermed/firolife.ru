@@ -1,0 +1,71 @@
+<div class="product-review">
+	@@if(context.title){
+		<div class="product-review-name">@@title</div>
+	}
+	@@if(!context.title){
+		<div class="product-review-name">Кирилл Сергеев</div>
+	}
+	<div class="product-review-info">
+		<div class="rating">
+			<div class="rating-state" style="width:70%;"></div>
+		</div>
+		<div class="product-review-date">13 марта 2021 г.</div>
+	</div>
+	<div class="product-review-text">
+		<p>Очень удобная подушка, со временем перестала болеть шея, сплю всю ночь как младенец, очень удобная подушка, со временем перестала болеть шея, сплю всю ночь как младенец.
+	</div>
+	@@if(context.answer){
+		<div class="product-review-answer">
+			<div class="product-review-answer-head">
+				<div class="product-review-name">Гипермед</div>
+				<div class="product-review-date">13 марта 2021 г.</div>
+			</div>
+			<div class="product-review-text">
+				<p>Здравствуйте Кирилл, мы рады, что вам очень понравилась, данная подушка. Спасибо за комментарий!
+			</div>
+		</div>
+	}
+	@@if(context.imgs){
+		<div class="product-review-imgs">
+			@@include('slider-arrows.html')
+			<div class="product-review-imgs-slider swiper-container">
+				<div class="swiper-wrapper">
+					@@if(context.imgs === 5){
+						@@for(var i = 0; i < 5; i++){
+							<div class="product-review-imgs-slide swiper-slide">
+								<a href="img/product-img-full.jpg" data-fancybox="product-review-@@id">
+									<img src="img/product-img-small.jpg" srcset="img/product-img-small@2x.jpg 2x" alt="">
+								</a>
+							</div>
+						}
+					}
+					@@if(context.imgs === 3){
+						@@for(var i = 0; i < 3; i++){
+							<div class="product-review-imgs-slide swiper-slide">
+								<a href="img/product-img-full.jpg" data-fancybox="product-review-@@id">
+									<img src="img/product-img-small.jpg" srcset="img/product-img-small@2x.jpg 2x" alt="">
+								</a>
+							</div>
+						}
+					}
+					@@if(context.imgs === 1){
+						<div class="product-review-imgs-slide swiper-slide">
+								<a href="img/product-img-full.jpg" data-fancybox="product-review-@@id">
+									<img src="img/product-img-small.jpg" srcset="img/product-img-small@2x.jpg 2x" alt="">
+								</a>
+							</div>
+					}
+					@@if(context.imgs === 2){
+						@@for(var i = 0; i < 2; i++){
+							<div class="product-review-imgs-slide swiper-slide">
+								<a href="img/product-img-full.jpg" data-fancybox="product-review-@@id">
+									<img src="img/product-img-small.jpg" srcset="img/product-img-small@2x.jpg 2x" alt="">
+								</a>
+							</div>
+						}
+					}
+				</div>
+			</div>
+		</div>
+	}
+</div>

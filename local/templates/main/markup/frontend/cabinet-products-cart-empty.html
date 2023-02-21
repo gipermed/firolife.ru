@@ -1,0 +1,35 @@
+@@include('header.html', {
+	"page": "cabinet"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Личный кабинет</a></li>
+			<li><a href="#">Товары</a></li>
+			<li>Корзина</li>
+		</ul>
+		@@include('cabinet-nav.html', {
+			"active": "products"
+		})
+		<ul class="cabinet-page-nav tabs-nav-default">
+			<li><a href="#">Избранное</a></li>
+			<li><a href="#">Лист ожидания</a></li>
+			<li class="active"><a href="#">Корзина</a></li>
+		</ul>
+		<div class="cabinet cabinet-products">
+			<div class="cabinet-section-title">Корзина</div>
+			<div class="empty-info">
+				<div class="empty-info-icon">
+					<img src="img/empty-icon.svg" alt="">
+				</div>
+				<div class="empty-info-title">Здесь пусто</div>
+				<div class="cart-empty-info">
+					<div class="empty-info-desc">В корзину ничего не добавлено.</div>
+					<div class="cart-empty-desc">Воспользуйтесь поиском, чтобы найти необходимые товары.</div>
+					<a href="#" class="btn btn-full btn-green cart-empty-btn">Начать покупки</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+@@include('footer.html')

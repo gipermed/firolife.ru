@@ -1,0 +1,127 @@
+@@include('header.html', {
+	"page": "promotions"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Главная</a></li>
+			<li>Акции</li>
+		</ul>
+		<h1 class="section-title">Все акции</h1>
+	</div>
+	<div class="promotions-section hidden-mobile">
+		<div class="container">
+			<div class="promotions-title">Новые акции</div>
+			<div class="promotions-row flex-row">
+				@@loop('promotions-col.html', [
+					{
+						"bg": "#A4FFFF",
+						"title": "Антисептик<br> для рук<br> Dezon",
+						"desc": "Скидка 10% при покупке 5 бутылок антисептиков с распылителем производства Dezon",
+						"btn": "Подробнее",
+						"img": 1
+					},
+					{
+						"bg": "#FF97AA",
+						"title": "Антисептик для рук<br> Dezon",
+						"desc": "Скидка 10% при покупке 5 бутылок антисептиков с распылителем производства Dezon",
+						"btn": "Подробнее",
+						"img": 1
+					},
+					{
+						"bg": "#5BC4FF",
+						"title": "Ортопедические подушки",
+						"desc": "При покупке подушек Ortocorrect<br>- 2 наволочки<br> в подарок",
+						"btn": "Получить подарок",
+						"img": 2
+					},
+				])
+			</div>
+		</div>
+	</div>
+	<div class="promotions-section">
+		<div class="container">
+			<div class="promotions-title">Активные акции</div>
+			<div class="promotions-row flex-row">
+				@@for(var i = 0; i < 2; i++){
+					@@loop('promotions-col.html', [
+						{
+							"bg": "#F7FFA9",
+							"title": "Антисептик<br> для рук<br> Dezon",
+							"desc": "Скидка 10% при покупке 5 бутылок антисептиков с распылителем производства Dezon",
+							"btn": "Подробнее",
+							"img": 1
+						},
+						{
+							"bg": "#EBB2FF",
+							"title": "Антисептик для рук<br> Dezon",
+							"desc": "Скидка 10% при покупке 5 бутылок антисептиков с распылителем производства Dezon",
+							"btn": "Подробнее",
+							"img": 1
+						},
+						{
+							"bg": "#D8FFCA",
+							"title": "Ортопедические подушки",
+							"desc": "При покупке подушек Ortocorrect<br>- 2 наволочки<br> в подарок",
+							"btn": "Получить подарок",
+							"img": 2
+						},
+					])
+				}
+				@@for(var i = 0; i < 2; i++){
+					@@loop('promotions-col.html', [
+						{
+							"bg": "#A4FFFF",
+							"title": "Антисептик<br> для рук<br> Dezon",
+							"desc": "Скидка 10% при покупке 5 бутылок антисептиков с распылителем производства Dezon",
+							"btn": "Подробнее",
+							"img": 1
+						},
+						{
+							"bg": "#FF97AA",
+							"title": "Антисептик для рук<br> Dezon",
+							"desc": "Скидка 10% при покупке 5 бутылок антисептиков с распылителем производства Dezon",
+							"btn": "Подробнее",
+							"img": 1
+						},
+						{
+							"bg": "#5BC4FF",
+							"title": "Ортопедические подушки",
+							"desc": "При покупке подушек Ortocorrect<br>- 2 наволочки<br> в подарок",
+							"btn": "Получить подарок",
+							"img": 2
+						},
+					])
+				}
+			</div>
+		</div>
+	</div>
+	<div class="promotions-section">
+		<div class="container">
+			<div class="promotions-title">Завершенные акции</div>
+			<div class="promotions-row promotions-row-ended flex-row">
+				@@loop('promotions-col.html', [
+					{
+						"title": "Антисептик<br> для рук<br> Dezon",
+						"desc": "Скидка 10% при покупке 5 бутылок антисептиков с распылителем производства Dezon",
+						"btn": "Подробнее",
+						"img": 1
+					},
+					{
+						"title": "Антисептик для рук<br> Dezon",
+						"desc": "Скидка 10% при покупке 5 бутылок антисептиков с распылителем производства Dezon",
+						"btn": "Подробнее",
+						"img": 1
+					},
+					{
+						"title": "Ортопедические подушки",
+						"desc": "При покупке подушек Ortocorrect<br>- 2 наволочки<br> в подарок",
+						"btn": "Получить подарок",
+						"img": 2
+					},
+				])
+			</div>
+		</div>
+	</div>
+</main>
+@@include('footer.html')

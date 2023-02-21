@@ -1,0 +1,33 @@
+{
+    "name": "palladiumlab/gipermed",
+    "description": "",
+    "type": "project",
+    "authors": [
+        {
+            "name": "PLWEB",
+            "email": "help@palladiumlab.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Palladiumlab\\": "lib/Palladiumlab/"
+        }
+    },
+    "require-dev": {
+      "roave/security-advisories": "dev-latest",
+      "symfony/var-dumper": "^v5.3"
+    },
+    "require": {
+        "php": "^7.4",
+        "ext-json": "*",
+        "monolog/monolog": "^2.2",
+        "symfony/console": "^v5.3",
+        "nesbot/carbon": "^2.49",
+        "vlucas/phpdotenv": "^5.3",
+        "illuminate/support": "^v8.48",
+        "symfony/filesystem": "^v5.3",
+        "symfony/finder": "^v5.3",
+        "lavary/crunz": "^v3.0"
+    }
+}

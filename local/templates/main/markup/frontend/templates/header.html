@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Gipermed</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link href="css/swiper-bundle.min.css" rel="stylesheet"/>
+	<link href="css/jquery.fancybox.min.css" rel="stylesheet"/>
+	<link href="css/jquery.ui.slider.css" rel="stylesheet"/>
+	<link href="css/styles.css" rel="stylesheet"/>
+</head>
+<body class="page-@@page">
+@@include('sprite.html')
+<div class="cookie">
+	<div class="container">
+		<div class="cookie-info">
+			<p>Наш сайт использует cookie для того, чтобы обеспечить максимальное удобство пользователям.
+			<p>Продолжая просматривать наш сайт, вы соглашаетесь с использованием cookie.
+		</div>
+		<ul class="cookie-links">
+			<li><a href="#" class="btn submit btn-green cookie-submit">Согласиться</a></li>
+			<li><a href="#">Подробнее</a></li>
+		</ul>
+	</div>
+</div>
+<header class="header">
+	@@include('header-alert.html')
+	<div class="head">
+		<div class="container">
+			<div class="head-row flex-row">
+				<div class="head-col head-col-city flex-row-item">
+					<a href="#modal-city" class="head-city-link modal-open-btn">
+						<svg width="24" height="24"><use xlink:href="#icon-cursor"/></svg>
+						<span><span class="hidden-desktop">Ваш регион доставки:</span> <b>Москва</b></span>
+					</a>
+				</div>
+				<div class="head-col head-col-menu flex-row-item">
+					<ul class="head-menu">
+						<li><a href="#">Адреса магазинов</a></li>
+						<li><a href="#">Оплата и доставка</a></li>
+						<li><a href="#">Возврат</a></li>
+						<li><a href="#">Программа лояльности</a></li>
+						<li><a href="#">Акции</a></li>
+					</ul>
+				</div>
+				<div class="head-col head-col-cabinet flex-row-item">
+					@@if(context.page === 'cabinet'){
+						<div class="header-cabinet">
+							<a href="#" class="header-cabinet-link">
+								<svg width="24" height="24"><use xlink:href="#icon-person"/></svg>
+								<span>Личный кабинет</span>
+							</a>
+							<nav class="header-cabinet-nav hidden-tablet">
+								<a href="#" class="header-cabinet-name">Иван</a>
+								<ul class="header-cabinet-menu">
+									<li><a href="#">Главная</a></li>
+									<li><a href="#">Заказы</a></li>
+									<li><a href="#">Товары</a></li>
+									<li><a href="#">Программа лояльности</a></li>
+									<li><a href="#">Сервис</a></li>
+									<li><a href="#">Профиль</a></li>
+								</ul>
+								<a href="#" class="header-cabinet-exit">Выход</a>
+							</nav>
+						</div>
+					}
+					@@if(context.page !== 'cabinet'){
+						@@include('head-cabinet-links.html')
+					}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-body">
+		<div class="container">
+			<div class="header-row flex-row">
+				<div class="header-col header-col-nav-open flex-row-item">
+					<a href="#" class="header-nav-open" aria-label="Меню"></a>
+				</div>
+				<div class="header-col header-col-logo flex-row-item">
+					<a href="#" class="logo" aria-label="На Главную страницу сайта">
+						<img src="img/logo.svg" alt="" width="104">
+					</a>
+				</div>
+				<div class="header-col header-col-contacts flex-row-item">
+					<div class="header-contacts">
+						<a href="#" class="header-contacts-open" aria-label="Открыть контакты">
+							<svg width="24" height="24"><use xlink:href="#icon-phone"/></svg>
+							<span>8 495 118-34-06</span>
+							<i><svg width="24" height="24"><use xlink:href="#icon-chevron-down"/></svg></i>
+						</a>
+						<div class="header-contacts-body">
+							@@include('contacts-tels.html')
+							<ul class="header-contacts-links">
+								<li>
+									<a href="#modal-feedback" class="modal-open-btn">
+										<svg width="16" height="16"><use xlink:href="#icon-email"/></svg>
+										<span>Написать письмо</span>
+									</a>
+								</li>
+								<li>
+									<a href="#modal-recall" class="modal-open-btn">
+										<svg width="16" height="16"><use xlink:href="#icon-call-back"/></svg>
+										<span>Заказать звонок</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="header-col header-col-search flex-row-item">
+					<form action="?" class="header-search">
+						<label class="form-block" aria-label="Поиск по товарам">
+							<input type="search" class="input search-input header-search-input" placeholder="Поиск по товарам" required>
+						</label>
+						<button type="submit" class="header-search-submit">
+							<svg width="24" height="24"><use xlink:href="#icon-search"/></svg>
+						</button>
+					</form>
+				</div>
+				<div class="header-col header-col-links flex-row-item">
+					<ul class="header-links">
+						<li class="visible-tablet">
+							<a href="tel:88003014406" aria-label="Позвонить">
+								<svg width="24" height="24"><use xlink:href="#icon-phone"/></svg>
+							</a>
+						</li>
+						<li class="visible-tablet" aria-label="Кабинет">
+							<a href="#">
+								<svg width="24" height="24"><use xlink:href="#icon-person"/></svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="header-favorites@@if(context.inFavorites){ active}">
+								<svg width="24" height="24"><use xlink:href="#icon-like"/></svg>
+								<span class="hidden-mobile">Избранное</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="header-cart@@if(context.inCart){ active}">
+								<svg width="24" height="24"><use xlink:href="#icon-basket"/></svg>
+								<span class="hidden-mobile">Корзина</span>
+								@@if(context.inCart){
+									<span class="header-cart-count">7</span>
+								}
+								@@if(!context.inCart){
+									<span class="header-cart-count">0</span>
+								}
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav class="header-nav">
+		@@include('header-alert.html')
+		<div class="header-nav-head visible-tablet">
+			<div class="container">
+				<a href="#" class="header-nav-close" aria-label="Закрыть">
+					<svg width="24" height="24"><use xlink:href="#icon-close"/></svg>
+				</a>
+				@@include('head-cabinet-links.html')
+			</div>
+		</div>
+		@@include('header-catalog.html')
+		<div class="header-nav-mobile visible-tablet">
+			<div class="container">
+				<div class="header-nav-mobile-menus">
+					<ul class="header-nav-mobile-menu">
+						<li>
+							<a href="#">
+								<i><svg width="24" height="24"><use xlink:href="#icon-discount"/></svg></i>
+								<span>Акции</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i><svg width="24" height="24"><use xlink:href="#icon-bag"/></svg></i>
+								<span>Мои заказы</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i><svg width="24" height="24"><use xlink:href="#icon-like"/></svg></i>
+								<span>Избранное</span>
+							</a>
+						</li>
+						<li>
+							<a href="#modal-city" class="modal-open-btn">
+								<i><svg width="24" height="24"><use xlink:href="#icon-location"/></svg></i>
+								<span>Город: Москва</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i><svg width="24" height="24"><use xlink:href="#icon-map"/></svg></i>
+								<span>Адреса магазинов</span>
+							</a>
+						</li>
+					</ul>
+					<ul class="header-nav-mobile-menu">
+						<li>
+							<a href="#">
+								<i><svg width="24" height="24"><use xlink:href="#icon-discount"/></svg></i>
+								<span>Акции</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i><svg width="24" height="24"><use xlink:href="#icon-bag"/></svg></i>
+								<span>Мои заказы</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i><svg width="24" height="24"><use xlink:href="#icon-like"/></svg></i>
+								<span>Избранное</span>
+							</a>
+						</li>
+						<li>
+							<a href="#modal-city" class="modal-open-btn">
+								<i><svg width="24" height="24"><use xlink:href="#icon-location"/></svg></i>
+								<span>Город: Москва</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i><svg width="24" height="24"><use xlink:href="#icon-map"/></svg></i>
+								<span>Адреса магазинов</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header-nav-mobile-menus">
+					<a href="#" class="header-nav-mobile-about-toggle">
+						<span>О нас</span>
+						<i><svg width="24" height="24"><use xlink:href="#icon-chevron-down"/></svg></i>
+					</a>
+					<ul class="header-nav-mobile-about-menu">
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Миссия</a></li>
+						<li><a href="#">Вакансии</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>

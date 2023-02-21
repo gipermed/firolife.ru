@@ -1,0 +1,43 @@
+<div class="cart-item">
+	<label class="cart-item-checkbox checkbox-label">
+		<input type="checkbox" class="checkbox-input">
+	</label>
+	<div class="cart-item-product">
+		<a href="#" class="item-link" aria-label="На страницу продукта"></a>
+		<div class="cart-item-product-img">
+			<img src="img/cart-item-product-img.jpg" srcset="img/cart-item-product-img@2x.jpg" alt="">
+		</div>
+		<div class="cart-item-product-body">
+			<div class="cart-item-product-title">Ортопедическая подушка под голову Qmed STANDARD</div>
+			<div class="cart-item-product-code">Артикул: <b>0123912-Qm-S</b></div>
+			<ul class="cart-item-product-info">
+				<li>Цвет: белый
+				<li>Размер: М
+			</ul>
+		</div>
+	</div>
+	<div class="cart-item-info">
+		<div class="cart-item-prices">
+			@@if(context.sale){
+				<div class="cart-item-price-old">5640 ₽</div>
+			}
+			<div class="cart-item-price">5 094 ₽</div>
+		</div>
+		<div class="cart-item-number">
+			@@if(context.number){
+				@@include('select-number.html', {
+					"value": 2
+				})
+				<div class="cart-item-number-unit active">2 547 ₽/ед.</div>
+			}
+			@@if(!context.number){
+				@@include('select-number.html')
+				<div class="cart-item-number-unit">2 547 ₽/ед.</div>
+			}
+		</div>
+		<a href="#" class="cart-item-del">
+			<svg width="24" height="24"><use xlink:href="#icon-trash"/></svg>
+			<span>Удалить</span>
+		</a>
+	</div>
+</div>

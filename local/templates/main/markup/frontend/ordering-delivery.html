@@ -1,0 +1,362 @@
+@@include('header.html', {
+	"page": "ordering"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Главная</a></li>
+			<li>Оформление заказа</li>
+		</ul>
+		<h1 class="section-title">Оформление заказа</h1>
+		@@include('ordering-steps.html', {
+			"delivery": true
+		})
+		<div class="ordering section">
+			<div class="ordering-body">
+				<div class="ordering-delivery-section ordering-section section">
+					<div class="ordering-section-title visible-mobile">Способ получения</div>
+					<ul class="tabs-nav tabs-nav-default ordering-delivery-tabs-nav" data-tabs="#ordering-delivery-tabs">
+						<li class="active"><a href="#ordering-delivery-tab-1">Самовывоз</a></li>
+						<li><a href="#ordering-delivery-tab-2">Доставка курьером</a></li>
+						<li><a href="#ordering-delivery-tab-3">Доставка до пункта выдачи заказов</a></li>
+					</ul>
+					<div id="ordering-delivery-tabs" class="tabs-wrapp tabs-wrapp-default ordering-section-body">
+						<div id="ordering-delivery-tab-1" class="tab-block active">
+							<div class="ordering-delivery-tab-title visible-mobile">Самовывоз:</div>
+							<form action="?" class="ordering-form form">
+								<div class="ordering-delivery-self">
+									<div class="ordering-delivery-self-info">
+										<div class="ordering-delivery-self-img">
+											<img src="img/shop-icon.svg" alt="">
+										</div>
+										<div class="ordering-delivery-self-desc">
+											<p>Стоимость: 
+											<p><b>Бесплатно</b>
+											<p>Срок доставки:
+											<p><b>Готов к получению</b>
+										</div>
+									</div>
+									<ul class="ordering-delivery-self-radios checkbox-list">
+										<li>
+											<label class="radio-label">
+												<input type="radio" class="radio-input" name="ordering-delivery-self-radio" required>
+												<span>
+													<span>Магазин на Пионерской:</span><br>
+													г. Москва, ст. м: Пионерская, ул. Малая Филёвская, д. 22
+												</span>
+											</label>
+										</li>
+										<li>
+											<label class="radio-label">
+												<input type="radio" class="radio-input" name="ordering-delivery-self-radio" required>
+												<span>
+													<span>Магазин на Первомайской:</span><br>
+													г. Москва, ст. м: Первомайская, ул. Нижняя Первомайская, д. 77
+												</span>
+											</label>
+										</li>
+										<li>
+											<label class="radio-label">
+												<input type="radio" class="radio-input" name="ordering-delivery-self-radio" required>
+												<span>
+													<span>Магазин на Щукинской</span><br>
+													г. Москва, ст. м: Щукинская, ул. Маршала Василевского, д. 15, ТЦ "Щучка"
+												</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<ul class="ordering-form-btns">
+									<li>
+										<a href="#" class="btn ordering-form-back-btn">&#60;&nbsp;Назад <span class="visible-mobile">к получателю заказа</span></a>
+									</li>
+									<li>
+										<button class="btn btn-green submit" disabled>Подтверждение заказа&nbsp;&#62;</button>
+									</li>
+								</ul>
+							</form>
+						</div>
+						<div id="ordering-delivery-tab-2" class="tab-block">
+							<div class="ordering-delivery-tab-title visible-mobile">Доставка курьером:</div>
+							<form action="?" class="ordering-form form">
+								<div class="ordering-delivery-section section">
+									<div class="ordering-delivery-section-title">Адрес доставки</div>
+									<div class="ordering-delivery-courier-address">
+										<div class="ordering-delivery-section-desc">Введите адрес, чтобы увидеть сроки и стоимость.</div>
+										<div class="ordering-delivery-courier-inputs">
+											<div class="form-block">
+												<div class="form-block-title">Населённый пункт</div>
+												<div class="form-block-select ordering-delivery-city-select">
+													<i class="select-icon"><svg width="24" height="24"><use xlink:href="#icon-chevron-down"/></svg></i>
+													<input type="text" class="ordering-delivery-city-select-input input select" value="Москва" required>
+													<div class="ordering-delivery-city-select-search">
+														<input type="text" class="ordering-delivery-city-select-search-input input">
+														<div class="ordering-delivery-city-select-search-info">Пожалуйста, начните вводить название города</div>
+													</div>
+												</div>
+											</div>
+											<label class="form-block">
+												<span class="form-block-title">Улица</span>
+												<input type="text" class="input" required>
+											</label>
+										</div>
+										<div class="ordering-delivery-courier-house">
+											<div class="form-row form-row-small flex-row">
+												<div class="form-col flex-row-item">
+													<label class="form-block">
+														<span class="form-block-title">Дом</span>
+														<input type="text" class="input" required>
+													</label>
+												</div>
+												<div class="form-col flex-row-item">
+													<label class="form-block">
+														<span class="form-block-title">Корпус</span>
+														<input type="text" class="input">
+													</label>
+												</div>
+												<div class="form-col flex-row-item">
+													<label class="form-block">
+														<span class="form-block-title">Строение</span>
+														<input type="text" class="input">
+													</label>
+												</div>
+												<div class="form-col flex-row-item">
+													<label class="form-block">
+														<span class="form-block-title">Квартира</span>
+														<input type="text" class="input">
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="ordering-delivery-courier-address-selected">
+										Москва, Россия, г Москва, ул 4-я Сокольническая , д. 7 <a href="#">Изменить</a>
+									</div>
+								</div>
+								<div class="ordering-delivery-section section">
+									<div class="ordering-delivery-section-title">Способ доставки</div>
+									<ul class="ordering-delivery-couriers">
+										<li>
+											<label class="radio-label ordering-delivery-courier-radio">
+												<input type="radio" class="radio-input" name="ordering-delivery-courier-radio" required>
+												<span class="ordering-delivery-courier-radio-title">
+													<span class="hidden-mobile">Пеший курьер по Москве</span>
+													<span class="visible-mobile">Пешим курьером до двери</span>
+												</span>
+												<span class="ordering-delivery-courier-body">
+													<span class="ordering-delivery-courier-radio-content">
+														<span class="ordering-delivery-courier-radio-info">
+															<span class="ordering-delivery-courier-radio-info-title">
+																<span class="hidden-mobile">Курьером до двери<br></span>
+																Вес товара < 5 кг
+															</span>
+															<span class="ordering-delivery-courier-radio-info-desc">
+																<span>
+																	Стоимость:<br>
+																	<b>299 ₽</b><br>
+																</span>
+																<span>
+																	Срок доставки:<br>
+																	<b>1 день</b>
+																</span>
+															</span>
+														</span>
+														<span class="ordering-delivery-courier-radio-icon">
+															<img src="img/delivery-icon-1.svg" alt="">
+														</span>
+													</span>
+													<span class="ordering-delivery-courier-radio-desc">* Доставка только по Москве в пределах МКАД</span>
+												</span>
+											</label>
+										</li>
+										<li>
+											<label class="radio-label ordering-delivery-courier-radio">
+												<input type="radio" class="radio-input" name="ordering-delivery-courier-radio" required>
+												<span class="ordering-delivery-courier-radio-title">
+													<span class="hidden-mobile">Курьер на автомобиле по Москве</span>
+													<span class="visible-mobile">Курьером на автомобиле до двери</span>
+												</span>
+												<span class="ordering-delivery-courier-body">
+													<span class="ordering-delivery-courier-radio-content">
+														<span class="ordering-delivery-courier-radio-info">
+															<span class="ordering-delivery-courier-radio-info-title">
+																<span class="hidden-mobile">Курьером до двери<br></span>
+																Вес товара > 5 кг
+															</span>
+															<span class="ordering-delivery-courier-radio-info-desc">
+																<span>
+																	Стоимость:<br>
+																	<b>499 ₽</b><br>
+																</span>
+																<span>
+																	Срок доставки:<br>
+																	<b>1 день</b>
+																</span>
+															</span>
+														</span>
+														<span class="ordering-delivery-courier-radio-icon">
+															<img src="img/delivery-icon-2.svg" alt="">
+														</span>
+													</span>
+													<span class="ordering-delivery-courier-radio-desc">* Доставка только по Москве в пределах МКАД</span>
+												</span>
+											</label>
+										</li>
+										<li>
+											<label class="radio-label ordering-delivery-courier-radio">
+												<input type="radio" class="radio-input" name="ordering-delivery-courier-radio" required>
+												<span class="ordering-delivery-courier-radio-title">
+													<span class="hidden-mobile">Курьер ТК СДЕК</span>
+													<span class="visible-mobile">Курьером транспортной компании до двери</span>
+												</span>
+												<span class="ordering-delivery-courier-body">
+													<span class="ordering-delivery-courier-radio-content">
+														<span class="ordering-delivery-courier-radio-info">
+															<span class="ordering-delivery-courier-radio-info-title hidden-mobile">
+																Курьером транспортной компании до двери
+															</span>
+															<span class="ordering-delivery-courier-radio-info-desc">
+																<span>
+																	Стоимость:<br>
+																	<b>306 ₽</b><br>
+																</span>
+																<span>
+																	Срок доставки:<br>
+																	<b>1 день</b>
+																</span>
+															</span>
+														</span>
+														<span class="ordering-delivery-courier-radio-icon">
+															<img src="img/delivery-icon-3.svg" alt="">
+														</span>
+													</span>
+													<span class="ordering-delivery-courier-radio-desc">* Доставка по всем регионам России</span>
+												</span>
+											</label>
+										</li>
+										<li>
+											<label class="radio-label ordering-delivery-courier-radio">
+												<input type="radio" class="radio-input" name="ordering-delivery-courier-radio" required>
+												<span class="ordering-delivery-courier-radio-title">
+													<span class="hidden-mobile">Курьер ТК Dalli</span>
+													<span class="visible-mobile">Курьером транспортной компании до двери</span>
+												</span>
+												<span class="ordering-delivery-courier-body">
+													<span class="ordering-delivery-courier-radio-content">
+														<span class="ordering-delivery-courier-radio-info">
+															<span class="ordering-delivery-courier-radio-info-title hidden-mobile">
+																Курьером транспортной компании до двери
+															</span>
+															<span class="ordering-delivery-courier-radio-info-desc">
+																<span>
+																	Стоимость:<br>
+																	<b>545 ₽</b><br>
+																</span>
+																<span>
+																	Срок доставки:<br>
+																	<b>1 день</b>
+																</span>
+															</span>
+														</span>
+														<span class="ordering-delivery-courier-radio-icon">
+															<img src="img/delivery-icon-4.svg" alt="">
+														</span>
+													</span>
+													<span class="ordering-delivery-courier-radio-desc">* Доставка по всем регионам России</span>
+												</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<ul class="ordering-form-btns">
+									<li>
+										<a href="#" class="btn ordering-form-back-btn">&#60;&nbsp;Назад <span class="visible-mobile">к получателю заказа</span></a>
+									</li>
+									<li>
+										<button class="btn btn-green submit" disabled>Подтверждение заказа&nbsp;&#62;</button>
+									</li>
+								</ul>
+							</form>
+						</div>
+						<div id="ordering-delivery-tab-3" class="tab-block">
+							<div class="ordering-delivery-tab-title visible-mobile">Доставка до пункта выдачи заказов</div>
+							<form action="?" class="ordering-form form">
+								<div class="ordering-delivery-section section">
+									<div class="ordering-delivery-section-title hidden-mobile">Пункты выдачи заказов</div>
+									<div class="ordering-delivery-points">
+										<div class="ordering-delivery-point ordering-section">
+											<div class="ordering-section-title ordering-delivery-point-title hidden-mobile">ПВЗ СДЕК</div>
+											<div class="ordering-section-body ordering-delivery-point-body">
+												<div class="ordering-delivery-point-content">
+													<div class="ordering-delivery-point-content-info">
+														<div class="ordering-delivery-point-content-title">До пункта выдачи заказа</div>
+														<div class="ordering-delivery-point-info">
+															<span>
+																Стоимость:<br>
+																<b>195 ₽</b><br>
+															</span>
+															<span>
+																Срок доставки:<br>
+																<b>2-3 дня</b>
+															</span>
+														</div>
+														<div class="ordering-delivery-point-desc visible-mobile">* ПВЗ по всей России</div>
+													</div>
+													<div class="ordering-delivery-point-icon">
+														<img src="img/delivery-icon-3.svg" alt="">
+													</div>
+												</div>
+												<div class="ordering-delivery-point-btn-wrapp">
+													<a href="#modal-ordering-delivery-point" class="ordering-delivery-point-btn btn modal-open-btn">Выбрать пункт выдачи</a>
+												</div>
+												<div class="ordering-delivery-point-desc hidden-mobile">* ПВЗ по всей России</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<ul class="ordering-form-btns">
+									<li>
+										<a href="#" class="btn ordering-form-back-btn">&#60;&nbsp;Назад <span class="visible-mobile">к получателю заказа</span></a>
+									</li>
+									<li>
+										<button class="btn btn-green submit" disabled>Подтверждение заказа&nbsp;&#62;</button>
+									</li>
+								</ul>
+							</form>
+						</div>
+					</div>
+				</div>
+				@@include('ordering-sidebar.html', {
+					"class": "visible-desktop",
+					"delivery": true
+				})
+				<div class="ordering-section ordering-section-cart section">
+					<div class="ordering-section-title ordering-section-title-toggle">
+						<span>Состав заказа</span>
+						<i><svg width="24" height="24"><use xlink:href="#icon-chevron-down"/></svg></i>
+					</div>
+					<div class="ordering-section-body">
+						<div class="cart-items">
+							@@loop('cart-item.html', [
+								{
+									"sale": true,
+									"number": 2
+								},
+								{
+									"sale": true,
+								}
+							])
+						</div>
+					</div>
+				</div>
+			</div>
+			@@include('ordering-sidebar.html', {
+				"class": "hidden-desktop",
+				"delivery": true
+			})
+		</div>
+	</div>
+</main>
+@@include('footer.html', {
+	"ordering": true
+})

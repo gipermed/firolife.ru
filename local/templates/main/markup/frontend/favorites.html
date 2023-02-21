@@ -1,0 +1,75 @@
+@@include('header.html', {
+	"page": "favorites"
+})
+<main class="main">
+	<div class="section">
+		<div class="container">
+			<ul class="breadcrumbs">
+				<li><a href="#">Главная</a></li>
+				<li>Избранное</li>
+			</ul>
+			<h1 class="section-title">Избранное</h1>
+			<div class="catalog-body">
+				<div class="catalog-row catalog-row-full products-row flex-row">
+					@@for(var i = 0; i < 2; i++){
+						@@loop('products-col.html', [
+							{
+								"img": "no",
+								"stiker": {
+									"type": "new",
+									"text": "Новинка"
+								},
+								"title": "Жгут резиновый Эсмарха для оперативной остановки кровотечения<br> Meridian",
+								"cost": "2 088 ₽",
+								"favorites": true
+							},
+							{
+								"img": 2,
+								"stiker": {
+									"type": "sale",
+									"text": "Скидка"
+								},
+								"title": "Грелка комбинированная (кружка Эсмарха) 1л<br> Meridian",
+								"sale": true,
+								"cost": "145 ₽",
+								"favorites": true
+							},
+							{
+								"img": 3,
+								"stiker": {
+									"type": "hit",
+									"text": "Хит"
+								},
+								"title": "Антисептик с распылителем 1 000 мл<br> Дезон",
+								"cost": "547 ₽",
+								"favorites": true
+							},
+							{
+								"img": 1,
+								"title": "Жгут резиновый Эсмарха для оперативной остановки кровотечения<br> Meridian",
+								"cost": "2 088 ₽",
+								"favorites": true
+							},
+							{
+								"img": 1,
+								"title": "Жгут резиновый Эсмарха для оперативной остановки кровотечения<br> Meridian",
+								"cost": "2 088 ₽",
+								"favorites": true
+							},
+						])
+					}
+				</div>
+				<div class="read-more-btn-wrapp visible-mobile">
+					<a href="#" class="read-more-btn catalog-view-more-btn btn">Показать больше</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section viewed-products-section">
+		<div class="container">
+			<div class="section-title">Просмотренные товары</div>
+			@@include('products-slider.html')
+		</div>
+	</div>
+</main>
+@@include('footer.html')

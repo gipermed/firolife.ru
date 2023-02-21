@@ -1,0 +1,34 @@
+@@include('header.html', {
+	"page": "cabinet"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Личный кабинет</a></li>
+			<li><a href="#">Заказы</a></li>
+			<li>Все заказы</li>
+		</ul>
+		@@include('cabinet-nav.html', {
+			"active": "orders"
+		})
+		<ul class="cabinet-page-nav tabs-nav-default">
+			<li><a href="#">Текущие заказы</a></li>
+			<li class="active"><a href="#">Все заказы</a></li>
+		</ul>
+		<div class="cabinet cabinet-orders">
+			<div class="cabinet-section-title">Все заказы</div>
+			<div class="empty-info">
+				<div class="empty-info-icon">
+					<img src="img/empty-icon.svg" alt="">
+				</div>
+				<div class="empty-info-title">Здесь пусто</div>
+				<div class="cart-empty-info">
+					<div class="empty-info-desc">У вас нет ранее оформленных заказов.</div>
+					<div class="cart-empty-desc">Чтобы оформить заказ воспользуйтесь каталогом продукции для добавления товаров в корзину. После добавления товаров в корзину оформите заказ.</div>
+					<a href="#" class="btn btn-full btn-green cart-empty-btn">Перейти в каталог</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+@@include('footer.html')

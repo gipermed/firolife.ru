@@ -1,0 +1,131 @@
+.catalog-price {
+	 color:red;
+}
+div.catalog-section table td {
+	padding-right:10px;
+	padding-top:10px;
+}
+.catalogsection {}
+.catalogsection ul { list-style: none; margin: 0px; padding: 0px;}
+.catalogsection li.blockitem { width: 27%; min-height: 290px; border:1px solid #ccc; padding: 15px; background: #fff; float: left;}
+
+.catalogsection h4 { margin: 0px; padding: 0px; text-align: center; }
+.catalogsection h4 a { color: #333; text-decoration: none; font-size:19px;}
+
+img.imsecit  { margin: 0px 0px 0px 0px;}
+
+.pricebl {}
+.pricebl p { color: #d20000; font-size: 18px; text-align: center; margin: 5px 0px 0px 0px; padding: 0px;}
+
+
+.offers {width: 100%; margin-top: 10px;}
+
+a.MinusList { display: block; padding: 3px; width: 15px; text-align: center; float: left; background: #f9f9f9; border-radius: 1px; box-shadow: 0px 1px 1px #777;}
+a.PlusList {display: block; padding: 3px; width: 15px; text-align: center; float: left; background: #f9f9f9; border-radius: 1px; box-shadow: 0px 1px 1px #777;}
+input.qantinbsk { float: left; height: 18px; width: 18px; text-align: center; margin: 0px 10px;}
+
+input.inbsk { float: right; margin: 0px; padding: 5px 10px; color: #fff; font-weight: bold;
+	background: #f2825b; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f2825b 0%, #e55b2b 64%, #db2c29 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2825b), color-stop(64%,#e55b2b), color-stop(100%,#db2c29)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f2825b 0%,#e55b2b 64%,#db2c29 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f2825b 0%,#e55b2b 64%,#db2c29 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f2825b 0%,#e55b2b 64%,#db2c29 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f2825b 0%,#e55b2b 64%,#db2c29 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2825b', endColorstr='#db2c29',GradientType=0 ); /* IE6-9 */
+	border:none;
+	border-radius: 2px;
+}
+input.inbsk:hover { background:#9fbc23;}
+input.inbsk:active { position: relative; bottom:-1px;}
+
+
+.nooffers {}
+.nooffers p {}
+.nooffers a {}
+
+
+
+
+
+
+
+
+
+
+
+
+.widget {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.widget a {
+	color: #222;
+	text-decoration: none;
+}
+
+.widget a:hover {
+	color: #009;
+	text-decoration: underline;
+}
+
+.tabnav li {
+	list-style: none;
+	width: 50px; height: 35px; background: #fff; float: left;
+}
+
+.tabnav li a {
+	margin: 15px 0px 0px 0px;
+	text-decoration: none;
+	color: #222;
+	padding: 2px 0px;
+	text-align: center;
+	width: 46px;
+	display: block;
+	outline: none;
+	border:1px solid #ddd;
+	font-size: 12px;
+}
+
+.tabnav li a:hover, .tabnav li a:active, .tabnav li.ui-tabs-selected a {
+	text-decoration: none;
+	color: #222;
+	padding: 2px 0px;
+	text-align: center;
+	width: 46px;
+	display: block;
+	outline: none;
+	border:1px solid #4ab1ff;
+	font-size: 12px;
+}
+
+.tabdiv {
+	margin-top: 15px;
+	background: #fff;
+	padding: 0px;
+}
+.tabdiv p { font-size: 18px; color: #000; margin: 0px; padding: 0px 10px 7px 0px; font-weight: bold;}
+
+.ui-tabs-hide {
+	display: none;
+}
+
+#featuredvid {
+	text-align: center;
+}
+
+.fvid {
+	margin-bottom: 5px;
+}
+
+.vidselector li {
+	text-align: left;
+	list-style: none;
+	padding: 5px;
+	background: #ffffff;
+	border: 1px solid #dedbd1;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}

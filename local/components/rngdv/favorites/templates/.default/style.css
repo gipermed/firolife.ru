@@ -1,0 +1,16 @@
+.rngdvfav .rngdvfav__hide-default {
+    display: none
+}
+
+.rngdvfav .rngdvfav__hide-on-added {
+    display: inline-block
+}
+
+.rngdvfav.rngdvfav--added .rngdvfav__hide-default {
+    display: inline-block
+}
+
+.rngdvfav.rngdvfav--added .rngdvfav__hide-on-added {
+    display: none
+}
+

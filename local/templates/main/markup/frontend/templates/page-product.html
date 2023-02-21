@@ -1,0 +1,591 @@
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Главная</a></li>
+			<li><a href="#">Категории</a></li>
+			<li><a href="#">Медицинские изделия</a></li>
+			<li><a href="#">Ортопедические изделия</a></li>
+			<li><a href="#">Ортопедические подушки</a></li>
+			<li>Ортопедическая подушка под голову Qmed Standart</li>
+		</ul>
+		<div class="product@@if(context.adult){ product-adult}@@if(context.notAvailable){ product-not-available}@@if(context.onOrder){ product-on-order}">
+			<div class="product-head">
+				<div class="product-head-content">
+					<h1 class="product-title section-title">Ортопедическая подушка под голову Qmed Standart</h1>
+					<div class="product-head-info">
+						<div class="product-code">Артикул: <span>0123912-Qm-S</span></div>
+						<div class="product-reviews">
+							<i class="visible-mobile">
+								<svg width="16" height="16"><use xlink:href="#icon-star-fill"/></svg>
+							</i>
+							<div class="rating hidden-mobile">
+								<div class="rating-state" style="width:70%;"></div>
+							</div>
+							<div class="product-reviews-value">3.7</div>
+							<a href="#" class="product-reviews-count">120 отзывов</a>
+						</div>
+						<a href="#" class="add-to-favorites-btn product-favorites">
+							<svg width="24" height="24"><use xlink:href="#icon-like"/></svg>
+							<span>В избранное</span>
+						</a>
+					</div>
+				</div>
+				<div class="product-programm hidden-tablet">
+					<div class="product-programm-icon">
+						<img src="img/product-programm-icon.svg" alt="">
+					</div>
+					<div class="product-programm-body">
+						<div class="product-programm-desc">Данный товар участвует в индивидуальной программе реабилитации</div>
+						<a href="#" class="product-programm-link">Подробнее&nbsp;&#62;</a>
+					</div>
+				</div>
+			</div>
+			<div class="product-gallery">
+				@@if(!context.noImg){
+				<div class="product-gallery-nav">
+					@@include('slider-arrows.html')
+					<div class="product-gallery-nav-slider swiper-container hidden-mobile">
+						<div class="swiper-wrapper">
+							@@for(var i = 0; i < 6; i++){
+								<div class="product-gallery-nav-slide swiper-slide">
+									<span>
+										@@if(context.adult){
+											<span class="product-item-img-adult">
+												<svg width="24" height="24"><use xlink:href="#icon-eye-close"/></svg>
+											</span>
+										}
+										<img src="img/product-img-small.jpg" srcset="img/product-img-small@2x.jpg 2x" alt="">
+									</span>
+								</div>
+							}
+						</div>
+					</div>
+				</div>
+				}
+				<div class="product-gallery-body">
+					<div class="product-item-stikers">
+						<div class="product-item-stiker product-item-stiker-sale">Скидка</div>
+					</div>
+					<div class="product-item-sale-profit">-25%</div>
+					@@if(context.adult){
+						<span class="product-item-img-adult">
+							<svg width="96" height="96"><use xlink:href="#icon-eye-close"/></svg>
+							<span>Товары для взрослых</span>
+						</span>
+					}
+					@@if(context.noImg){
+						<div class="product-img product-img-no-photo">
+							<img src="img/no-photo.svg" alt="" width="288">
+						</div>
+					}
+					@@if(!context.noImg){
+						<div class="product-gallery-zoom hidden-mobile">
+							<img src="img/product-zoom.svg" alt="">
+						</div>
+						<div class="product-gallery-slider swiper-container">
+							<div class="swiper-wrapper">
+								@@for(var i = 0; i < 6; i++){
+									<div class="product-gallery-slide swiper-slide">
+										<a href="img/product-img-full.jpg" class="product-img" data-fancybox="product">
+											<img src="img/product-img.jpg" srcset="img/product-img@2x.jpg 2x" alt="">
+										</a>
+									</div>
+								}
+							</div>
+						</div>
+					}
+				</div>
+			</div>
+			<div class="product-body">
+				<div class="product-info product-size">
+					<div class="product-info-title">Размер:</div>
+					<ul class="product-size-list">
+						<li><a href="#">M</a></li>
+						<li class="active"><a href="#">L</a></li>
+						<li><a href="#">XL</a></li>
+						<li><a href="#">XXL</a></li>
+					</ul>
+				</div>
+				<div class="product-info product-color">
+					<div class="product-info-title">Цвет: <span class="product-color-selected">Салатовый</span></div>
+					<ul class="product-color-list">
+						<li>
+							<a href="#" data-color="Белай" aria-label="Белай" style="color:#fff;"></a>
+						</li>
+						<li>
+							<a href="#" data-color="Оранжевый" aria-label="Оранжевый" style="color:#FFB21E;"></a>
+						</li>
+						<li class="active">
+							<a href="#" data-color="Салатовый" aria-label="Салатовый" style="color:#CDDC33;"></a>
+						</li>
+						<li>
+							<a href="#" data-color="Красный" aria-label="Красный" style="color:#ED2226;"></a>
+						</li>
+						<li>
+							<a href="#" data-color="Серый" aria-label="Серый" style="color:#C4C4C4;"></a>
+						</li>
+					</ul>
+				</div>
+				<div class="product-info product-number">
+					<div class="product-info-title">Количество:</div>
+					@@include('select-number.html')
+				</div>
+				<div class="product-info product-price">
+					<div class="product-info-title">Цена:</div>
+					<div class="product-price-old">2 820 ₽</div>
+					<div class="product-price-body">
+						<div class="product-cost">5 094 ₽</div>
+						<div class="product-cost-unit">2 547 ₽/ед.</div>
+					</div>
+				</div>
+				<div class="product-info product-btns">
+					<ul class="product-btns-list">
+						@@if(context.expected && !context.loggedIn){
+							<li>
+								<a href="#modal-expected-registration" class="btn btn-large btn-full modal-open-btn product-expected-btn">В лист ожидания</a>
+							</li>
+						}
+						@@if(context.expected && context.loggedIn){
+							<li>
+								<a href="#" class="btn btn-large btn-full product-expected-btn product-expected-btn-add" data-text="В лист ожидания" data-text-active="В листе ожидания">В лист ожидания</a>
+							</li>
+						}
+						@@if(!context.expected && !context.onOrder){
+							<li>
+								<a href="#" class="btn btn-large btn-full product-cart-btn add-to-cart-btn" data-text="Добавить в корзину" data-text-active="В корзине">Добавить в корзину</a>
+							</li>
+						}
+						@@if(context.onOrder){
+							<li>
+								<a href="#modal-product-feedback" class="btn btn-large btn-full product-feedback-btn modal-open-btn">Связаться с менеджером</a>
+							</li>
+						}
+						<li>
+							<a href="#modal-fast-buy" class="btn btn-large btn-full btn-border btn-border-alt product-fast-buy-btn modal-open-btn">Купить в один клик</a>
+						</li>
+						<li>
+							<a href="#modal-registration" class="btn btn-large btn-full btn-border btn-border-alt product-registration-btn modal-open-btn">Зарегистистрируйтесь и получите скидку на первую покупку</a>
+						</li>
+					</ul>
+				</div>
+				@@if(!context.expected && !context.notAvailable && !context.onOrder){
+					<div class="product-info product-state product-state-available">В наличии</div>
+				}
+				@@if(context.notAvailable){
+					<div class="product-info product-state product-state-not-available">Нет в наличие</div>
+				}
+				@@if(context.expected){
+					<div class="product-info product-state product-state-expected" data-text="Ожидается" data-text-active="В листе ожидания">Ожидается</div>
+				}
+				@@if(context.onOrder){
+					<div class="product-info product-state product-state-on-order">Под заказ</div>
+				}
+				<div class="product-info product-delivery">
+					<div class="product-info-title">Доставка:</div>
+					<div class="product-info-desc">
+						<p>Доставим по Москве и МО 05 марта - от 100 ₽
+						<p>Самовывоз в магазине в Москве 04 марта - бесплатно
+						<p>В пункте выдачи 05 марта - от 1 ₽
+					</div>
+				</div>
+				<div class="product-info product-short-desc">
+					<div class="product-info-title">Кратко о товаре:</div>
+					<div class="product-info-desc">
+						<p>• С эффектом памяти;
+						<p>• Пенополиуретановый наполнитель;
+						<p>• Съёмная наволочка.
+					</div>
+				</div>
+				<div class="product-info product-brand">
+					<div class="product-info-title">Бренд:</div>
+					<a href="#" class="product-brand-logo">
+						<img src="img/product-brand-logo.svg" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section product-tabs-section">
+		<div class="container">
+			<div class="product-tabs-nav-wrapp">
+				<ul class="product-tabs-nav tabs-nav" data-tabs="#product-tabs">
+					<li class="active"><a href="#product-tab-1">Описание товара</a></li>
+					<li><a href="#product-tab-2">Отзывы (120)</a></li>
+					<li><a href="#product-tab-3">Видеообзор</a></li>
+					<li><a href="#product-tab-4">Статьи</a></li>
+				</ul>
+			</div>
+			<div id="product-tabs" class="tabs-wrapp">
+				<div id="product-tab-1" class="tab-block active">
+					<div class="product-tab-info-row flex-row">
+						<div class="product-tab-info-col flex-row-item">
+							<div class="product-tab-section toggle-mobile-wrapp">
+								<div class="product-tab-title">Описание:</div>
+								<div class="product-desc toggle-mobile-block content-text">
+									<p>Ортопедическая подушка Qmed STANDARD (мягкая) - используется во время сна для придания голове и шейному отделу позвоночника анатомически правильного положения. Она может использоваться как для профилактики патологий шейных позвонков, так и во время их лечения.
+									<p>Подушку могут использовать все люди, которые желают отдыхать с комфортом и не страдать от неудобных поз во время сна.
+									<p>В течение первых 1-2 недель использования может ощущаться легкий дискомфорт, связанный с привыканием к анатомическому положению головы. Подушка обладает эффектом памяти, то есть сохраняет ортопедическое положение.
+									<p>Заказать ортопедическую подушку польского производства Qmed STANDARD (мягкая) можно на сайте центра торговли медицинскими товарами «Гипермед» по доступной цене оптом и в розницу. Для уточнения информации воспользуйтесь указанными на сайте телефонами или обратитесь к консультантам в онлайн-чате. Мы предоставляем товары высокого качества, обеспечиваем быструю доставку во все города России.</p>
+									<ul>
+										<li>Обеспечивает устойчивое правильное положение головы, шейного отдела.
+										<li>Расслабляет мышечный каркас плечевого пояса.
+										<li>Уменьшает болевой синдром при заболеваниях позвоночника.
+										<li>Снимает усталость в зоне головы и шеи.
+										<li>Предотвращает возникновение искривлений позвоночника.
+										<li>Улучшает кровоснабжение головного мозга.
+										<li>Устраняет риск пережатия нервных окончаний.
+										<li>Ускоряет восстановление после травм или оперативных вмешательств на голове или в области шейного отдела.
+										<li>Улучшает качество сна, повышает скорость засыпания.
+									</ul>
+								</div>
+								<a href="#" class="toggle-mobile-link" data-text="Развернуть описание" data-text-active="Свернуть описание">
+									<span>Развернуть описание</span>
+									<i><svg width="24" height="24"><use xlink:href="#icon-chevron-down"/></svg></i>
+								</a>
+							</div>
+						</div>
+						<div class="product-tab-info-col flex-row-item">
+							<div class="product-tab-section">
+								<div class="product-tab-title">Технические характеристики:</div>
+								<div class="product-characteristics">
+									<table class="product-characteristics-table">
+										<tr>
+											<td>Плотность:</td>
+											<td>55 кг/м³</td>
+										</tr>
+										<tr>
+											<td>Наполнитель:</td>
+											<td>Пенополиуретан</td>
+										</tr>
+										<tr>
+											<td>Цвет:</td>
+											<td>Белый</td>
+										</tr>
+										<tr>
+											<td>Эффект памяти:</td>
+											<td>Да</td>
+										</tr>
+										<tr>
+											<td>Наволочка съемная:</td>
+											<td>Да</td>
+										</tr>
+										<tr>
+											<td>Размер:</td>
+											<td>M - 52*32*11,5 (см)</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<div class="product-tab-section">
+								<div class="product-tab-title">Документация:</div>
+								<ul class="product-docs">
+									<li>
+										<a href="#" class="doc-link">
+											<svg width="34" height="34"><use xlink:href="#icon-doc"/></svg>
+											<span class="doc-link-body">
+												<span class="doc-link-title">Регистрационное удостоверение</span>
+												<span class="doc-link-size">Скачать: 2 Мб</span>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="doc-link">
+											<svg width="34" height="34"><use xlink:href="#icon-doc"/></svg>
+											<span class="doc-link-body">
+												<span class="doc-link-title">Технические характеристики</span>
+												<span class="doc-link-size">Скачать: 250 Кб</span>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="doc-link">
+											<svg width="34" height="34"><use xlink:href="#icon-doc"/></svg>
+											<span class="doc-link-body">
+												<span class="doc-link-title">Инструкция по применению</span>
+												<span class="doc-link-size">Скачать: 500 Кб</span>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="product-tab-section">
+								<div class="product-tab-title">Производство:</div>
+								<div class="product-made-in">
+									<i><img src="img/product-made-in.svg" alt=""></i>
+									<span>Польша</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="product-tab-2" class="tab-block">
+					@@if(context.loggedIn){
+						<div class="product-tab-section">
+							<div class="product-tab-title visible-mobile">Все отзывы <span>(120)</span></div>
+							<div class="product-user-reviews">
+								<div class="product-user-reviews-body">
+									<div class="product-tab-title product-tab-review-title hidden-mobile">Все отзывы <span>(120)</span></div>
+									<a href="#" class="btn product-review-add-btn" data-text="Написать отзыв" data-text-active="Закрыть отзыв">Написать отзыв</a>
+								</div>
+								<div class="product-reviews-state">
+									<div class="product-reviews-state-info">
+										<div class="product-reviews-state-value">3.7</div>
+										<div class="product-reviews-state-desc">На основании<br> 120 отзывов</div>
+										<div class="rating">
+											<div class="rating-state" style="width:70%;"></div>
+										</div>
+									</div>
+									<table class="product-reviews-state-table">
+										<tr>
+											<td>5</td>
+											<td>
+												<div class="product-reviews-state-proggress">
+													<div class="product-reviews-state-proggress-value" style="width:25%;"></div>
+												</div>
+											</td>
+											<td>25%</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>
+												<div class="product-reviews-state-proggress">
+													<div class="product-reviews-state-proggress-value" style="width:45%;"></div>
+												</div>
+											</td>
+											<td>45%</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>
+												<div class="product-reviews-state-proggress">
+													<div class="product-reviews-state-proggress-value" style="width:30%;"></div>
+												</div>
+											</td>
+											<td>30%</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>
+												<div class="product-reviews-state-proggress">
+													<div class="product-reviews-state-proggress-value"></div>
+												</div>
+											</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="product-reviews-state-proggress">
+													<div class="product-reviews-state-proggress-value"></div>
+												</div>
+											</td>
+											<td>0</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<form action="?" class="product-review-form form">
+								<div class="product-review-form-body">
+									<div class="product-review-form-rating">
+										<div class="product-review-form-title">Ваша оценка</div>
+										<div class="rating rating-select">
+											<div class="rating-state"></div>
+											<input type="hidden" class="rating-select-input">
+										</div>
+									</div>
+									<label class="form-block">
+										<span class="product-review-form-input-title">
+											<span class="product-review-form-title">Отзыв</span>
+											<span class="product-review-form-input-info">Введено символов <span class="product-review-form-input-letters">0</span>&nbsp;/&nbsp;1000</span>
+										</span>
+										<span class="product-review-form-input-wrapp">
+											<textarea class="input textarea product-review-form-input" placeholder="Текст отзыва" maxlength="1000" required></textarea>
+										</span>
+									</label>
+									<div class="product-review-form-imgs">
+										<div class="product-review-form-title">Загрузите фотографии</div>
+										<ul class="product-review-form-imgs-list">
+											@@for(var i = 0; i < 5; i++){
+												<li>
+													<label class="product-review-form-img">
+														<input type="file" accept=".jpg, .jpeg, .png">
+														<i><img src="img/icon-camera.svg" alt=""></i>
+														<span></span>
+													</label>
+												</li>
+											}
+										</ul>
+										<div class="product-review-form-imgs-desc">Поддерживаемые форматы: <span>JPG, JPEG, PNG</span></div>
+									</div>
+									<div class="product-review-form-recaptcha">
+										<img src="img/recaptcha.png" alt="">
+									</div>
+									<div class="submit-wrapp">
+										<ul class="product-review-form-btns">
+											<li>
+												<button type="submit" class="btn btn-full submit">Отправить</button>
+											</li>
+											<li>
+												<a href="#" class="product-review-form-close btn btn-full">Отменить</a>
+											</li>
+										</ul>
+									</div>
+									<div class="form-agreement">Размещая отзыв на сайте, вы даёте согласие на использование данных отзыва на сторонних ресурсах</div>
+								</div>
+							</form>
+						</div>
+					}
+					<div class="product-tab-section">
+						@@if(!context.loggedIn){
+							<div class="product-tab-title product-tab-review-title">Все отзывы <span>(120)</span></div>
+						}
+						<div class="product-tab-reviews">
+							@@include('product-review.html')
+							@@include('product-review.html', {
+								"id": 2,
+								"imgs": 5
+							})
+							@@include('product-review.html', {
+								"answer": true,
+								"id": 3,
+								"imgs": 3
+							})
+							@@include('product-review.html', {
+								"id": 4,
+								"imgs": 3
+							})
+							@@include('product-review.html')
+							@@include('product-review.html')
+							@@include('product-review.html', {
+								"id": 7,
+								"imgs": 1
+							})
+							@@include('product-review.html')
+							@@include('product-review.html', {
+								"id": 9,
+								"imgs": 2
+							})
+						</div>
+						<div class="read-more-btn-wrapp">
+							<a href="#" class="btn read-more-btn">Показать ещё</a>
+						</div>
+					</div>
+				</div>
+				<div id="product-tab-3" class="tab-block">
+					<div class="product-tab-section">
+						<div class="product-tab-title product-tab-video-title"><div>Видеообзор</div> <b>Ортопедические подушки Qmed</b></div>
+						<div class="product-video">
+							<a href="https://www.youtube.com/embed/_OfT0UdH2PA" class="product-video-link" data-fancybox data-fancybox-type="iframe">
+								<span class="product-video-link-logo">
+									<img src="img/youtube-logo.svg" alt="">
+								</span>
+								<span class="product-video-link-play">
+									<i></i>
+									<span>Смотреть</span>
+								</span>
+								<span class="product-video-link-img cover-img">
+									<img src="https://img.youtube.com/vi/_OfT0UdH2PA/maxresdefault.jpg" alt="">
+								</span>
+							</a>
+							<div class="product-video-body">
+								<div class="product-video-desc content-text">
+									<p>Ознакомиться с видеопрезентацией различных товаров медицинского назначения, можно на нашем Youtube канале. Перейдя по ссылке, Вы найдете более 100 видеороликов, сможете увидеть комплектацию, внешний вид, характеристики товаров и многое другое. Подписывайтесь на наш канал, будьте всегда в курсе новинок от компании Гипермед - Центра торговли медицинскими товарами!
+								</div>
+								<a href="#" class="product-video-more-link">Посмотреть все видеопрезентации&nbsp;&#62;</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="product-tab-4" class="tab-block">
+					<div class="product-tab-section">
+						<div class="product-tab-title product-tab-articles-title">Статьи</div>
+						<div class="product-articles-row articles-row flex-row">
+							@@for(var i = 0; i < 2; i++){
+								@@loop('articles-col.html', [
+									{
+										"img": 1,
+										"title": "Ортопедические подушки, основные критерии выбора."
+									},
+									{
+										"img": 1,
+										"title": "Осанка у ребенка. Как бороться с искривлением позвоночника у детей? Методы решения проблемы."
+									},
+								])
+							}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="product-programm visible-tablet">
+				<div class="product-programm-icon">
+					<img src="img/product-programm-icon.svg" alt="">
+				</div>
+				<div class="product-programm-body">
+					<div class="product-programm-desc">Данный товар участвует в индивидуальной программе реабилитации</div>
+					<a href="#" class="product-programm-link">Подробнее&nbsp;&#62;</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section similar-products-section">
+		<div class="container">
+			<div class="section-title">Похожие товары</div>
+			@@if(!context.adult){
+				@@include('products-slider.html')
+			}
+			@@if(context.adult){
+				@@include('products-slider.html', {
+					"adult": true
+				})
+			}
+		</div>
+	</div>
+	@@if(context.viewed){
+		<div class="section viewed-products-section">
+			<div class="container">
+				<div class="section-title">Просмотренные товары</div>
+				@@if(!context.adult){
+					@@include('products-slider.html')
+				}
+				@@if(context.adult){
+					@@include('products-slider.html', {
+						"adult": true
+					})
+				}
+			</div>
+		</div>
+	}
+	<div class="section promotions-section">
+		<div class="container">
+			<div class="section-title">Акции</div>
+			<div class="promotions-row flex-row">
+				@@loop('promotions-col.html', [
+					{
+						"bg": "#A4FFFF",
+						"title": "Антисептик<br> для рук<br> Dezon",
+						"desc": "Скидка 10% при покупке 5 бутылок антисептиков с распылителем производства Dezon",
+						"btn": "Подробнее",
+						"img": 1
+					},
+					{
+						"bg": "#FF97AA",
+						"title": "Антисептик для рук<br> Dezon",
+						"desc": "Скидка 10% при покупке 5 бутылок антисептиков с распылителем производства Dezon",
+						"btn": "Подробнее",
+						"img": 1
+					},
+					{
+						"bg": "#5BC4FF",
+						"title": "Ортопедические подушки",
+						"desc": "При покупке подушек Ortocorrect<br>- 2 наволочки<br> в подарок",
+						"btn": "Получить подарок",
+						"img": 2
+					}
+				])
+			</div>
+			<div class="read-more-btn-wrapp">
+				<a href="#" class="btn read-more-btn">Все акции</a>
+			</div>
+		</div>
+	</div>
+</main>

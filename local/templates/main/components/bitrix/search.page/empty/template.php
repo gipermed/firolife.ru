@@ -1,0 +1,1 @@
+<?php check_prolog();

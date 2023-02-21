@@ -1,0 +1,23 @@
+@@include('header.html', {
+	"page": "cabinet"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Личный кабинет</a></li>
+			<li><a href="#">Сервис</a></li>
+			<li>Возврат</li>
+		</ul>
+		@@include('cabinet-nav.html', {
+			"active": "service"
+		})
+		<ul class="cabinet-page-nav tabs-nav-default">
+			<li class="active"><a href="#">Возврат</a></li>
+		</ul>
+		<div class="cabinet cabinet-service">
+			<div class="cabinet-section-title">Возврат</div>
+			@@include('refund.html')
+		</div>
+	</div>
+</main>
+@@include('footer.html')

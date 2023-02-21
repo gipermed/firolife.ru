@@ -1,0 +1,26 @@
+<div class="ordering-sidebar @@class">
+	<div class="cart-sidebar-order">
+		<div class="cart-sidebar-order-title">Ваш заказ</div>
+		<div class="cart-sidebar-order-info">
+			<div class="cart-sidebar-order-info-title">Товары (5)</div>
+			<div class="cart-sidebar-order-info-sum">46 823 ₽</div>
+		</div>
+		<div class="cart-sidebar-order-info cart-sidebar-order-info-sale">
+			<div class="cart-sidebar-order-info-title">Скидка</div>
+			<div class="cart-sidebar-order-info-sum">- 1 729 ₽</div>
+		</div>
+	</div>
+	@@if(context.delivery){
+		<div class="cart-sidebar-order cart-sidebar-delivery">
+			<div class="cart-sidebar-order-title">Доставка</div>
+			<div class="cart-sidebar-order-info">
+				<div class="cart-sidebar-order-info-title">Самовывоз из магазина на Пионерской</div>
+				<div class="cart-sidebar-order-info-sum">0 ₽</div>
+			</div>
+		</div>
+	}
+	<div class="cart-sidebar-total">
+		<div class="cart-sidebar-total-title">Итого</div>
+		<div class="cart-sidebar-total-sum">45 094 ₽</div>
+	</div>
+</div>

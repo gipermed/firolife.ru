@@ -1,0 +1,64 @@
+@@include('header.html', {
+	"page": "cabinet"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Личный кабинет</a></li>
+			<li><a href="#">Профиль</a></li>
+			<li>Отзывы</li>
+		</ul>
+		@@include('cabinet-nav.html', {
+			"active": "profile"
+		})
+		<ul class="cabinet-page-nav tabs-nav-default">
+			<li><a href="#">Личные данные</a></li>
+			<li><a href="#">Мои адреса</a></li>
+			<li class="active"><a href="#">Отзывы</a></li>
+		</ul>
+		<div class="cabinet cabinet-reviews cabinet-section">
+			<div class="cabinet-section-title">Мои отзывы</div>
+			<div class="cabinet-reviews-wrapp">
+				@@include('product-review.html', {
+					"title": "Подушка Qmed",
+				})
+				@@include('product-review.html', {
+					"title": "Подушка Qmed",
+					"id": 2,
+					"imgs": 5
+				})
+				@@include('product-review.html', {
+					"title": "Подушка Qmed",
+					"answer": true,
+					"id": 3,
+					"imgs": 3
+				})
+				@@include('product-review.html', {
+					"title": "Подушка Qmed",
+					"id": 4,
+					"imgs": 3
+				})
+				@@include('product-review.html', {
+					"title": "Подушка Qmed",
+				})
+				@@include('product-review.html', {
+					"title": "Подушка Qmed",
+				})
+				@@include('product-review.html', {
+					"title": "Подушка Qmed",
+					"id": 7,
+					"imgs": 1
+				})
+				@@include('product-review.html', {
+					"title": "Подушка Qmed",
+				})
+				@@include('product-review.html', {
+					"title": "Подушка Qmed",
+					"id": 9,
+					"imgs": 2
+				})
+			</div>
+		</div>
+	</div>
+</main>
+@@include('footer.html')

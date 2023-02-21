@@ -1,0 +1,44 @@
+@@include('header.html', {
+	"page": "promotion"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Главная</a></li>
+			<li><a href="#">Акции</a></li>
+			<li>Антисептик для рук Dezon</li>
+		</ul>
+		<a href="#" class="btn back-btn visible-mobile">&#60;&nbsp;Вернуться в акции</a>
+		<div class="promotion-head">
+			<h1 class="promotion-title">Скидка 10% на Антисептик для рук Dezon</h1>
+			<div class="promotion-date">Дата окончания акции: 31 марта 2021 года</div>
+		</div>
+		<div class="promotion-banner">
+			<div class="promotion-banner-body">
+				<div class="promotion-banner-title">Антисептик для рук Dezon</div>
+				<div class="promotion-banner-desc">Скидка 10% при покупке 5 бутылок антисептиков с распылителем производства Dezon</div>
+			</div>
+			<div class="promotion-banner-img">
+				<img src="img/promotion-banner.png" srcset="img/promotion-banner@2x.png 2x" alt="">
+			</div>
+		</div>
+		<div class="content-section promotion-section section">
+			<div class="content-title">Условия акции</div>
+			<div class="promotion-content content-text">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel rhoncus enim justo aenean elementum scelerisque ut vitae. Tellus arcu, in duis at orci lobortis. Cursus dis diam at et aenean. Ipsum mi, bibendum amet, sit penatibus ac risus sed habitasse.
+				<p>Accumsan dui egestas augue nunc nunc. Mattis massa turpis lectus pellentesque. Ac dolor convallis viverra laoreet suspendisse diam. Fermentum id dui sit purus quis in platea. Cursus dictum porttitor suscipit neque dictumst. Est id velit ac urna quam lacus, integer venenatis senectus. Venenatis neque fermentum diam enim mauris.
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel rhoncus enim justo aenean elementum scelerisque ut vitae. Tellus arcu, in duis at orci lobortis. Cursus dis diam at et aenean. Ipsum mi, bibendum amet, sit penatibus ac risus sed habitasse.
+				<p>Accumsan dui egestas augue nunc nunc. Mattis massa turpis lectus pellentesque. Ac dolor convallis viverra laoreet suspendisse diam. Fermentum id dui sit purus quis in platea. Cursus dictum porttitor suscipit neque dictumst. Est id velit ac urna quam lacus, integer venenatis senectus. Venenatis neque fermentum diam enim mauris.
+			</div>
+		</div>
+		<div class="content-section promotion-section section">
+			<div class="content-title">В акции участвуют товары</div>
+			@@include('products-slider.html')
+		</div>
+		<div class="content-section promotion-section section">
+			<div class="content-title">Рекомендуемые товары</div>
+			@@include('products-slider.html')
+		</div>
+	</div>
+</main>
+@@include('footer.html')

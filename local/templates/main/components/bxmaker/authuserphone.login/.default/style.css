@@ -1,0 +1,41 @@
+.bxmaker-authuserphone-login--auth .cbaup_row {
+    padding-bottom: 15px;
+    position: relative;
+}
+.bxmaker-authuserphone-login--auth .cbaup_row input[type="text"], .bxmaker-authuserphone-login--auth .cbaup_row input[type="password"] , .bxmaker-authuserphone-login--auth .cbaup_row input.smscode {
+    display: block;
+    width: 100%;
+    padding: 16px 14px;
+    border: 1px solid #C4C4C4;
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 1;
+    color: #6F6F6F;
+    transition: all .3s ease;
+}
+.bxmaker-authuserphone-login--auth .cbaup_row input[type="text"], .bxmaker-authuserphone-login--auth .cbaup_row input[type="password"], .bxmaker-authuserphone-login--auth .cbaup_row input.smscode {
+    padding: 7px 14px;
+    font-size: 13px;
+}
+.bxmaker-authuserphone-login--auth .btn{
+    width: 100%;
+}
+#modal-enter .bxmaker-authuserphone-login--auth {
+    padding: 0 20px 20px;
+}
+.auth-number__send {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 8px;
+}
+.auth-description {
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 13px;
+    color: #545454;
+    text-align: center;
+    margin-bottom: 22px;
+}

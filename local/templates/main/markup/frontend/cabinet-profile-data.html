@@ -1,0 +1,157 @@
+@@include('header.html', {
+	"page": "cabinet"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Личный кабинет</a></li>
+			<li><a href="#">Профиль</a></li>
+			<li>Личные данные</li>
+		</ul>
+		@@include('cabinet-nav.html', {
+			"active": "profile"
+		})
+		<ul class="cabinet-page-nav tabs-nav-default">
+			<li class="active"><a href="#">Личные данные</a></li>
+			<li><a href="#">Мои адреса</a></li>
+			<li><a href="#">Отзывы</a></li>
+		</ul>
+		<div class="cabinet cabinet-profile">
+			<div class="cabinet-profile-body">
+				<div class="cabinet-section cabinet-section-profile-data">
+					<div class="cabinet-profile-title-wrapp">
+						<div class="cabinet-section-title">Личные данные</div>
+						<div class="cabinet-profile-title-desc">Информация для заказов</div>
+					</div>
+					<form action="?" class="cabinet-profile-form form">
+						<div class="cabinet-profile-form-row flex-row">
+							<div class="cabinet-profile-form-col flex-row-item">
+								<label class="form-block">
+									<span class="form-block-title">Фамилия:</span>
+									<input type="text" class="input" value="Иванов" required>
+								</label>
+							</div>
+							<div class="cabinet-profile-form-col flex-row-item">
+								<label class="form-block">
+									<span class="form-block-title">Имя:</span>
+									<input type="text" class="input" value="Иван" required>
+								</label>
+							</div>
+							<div class="cabinet-profile-form-col flex-row-item">
+								<label class="form-block">
+									<span class="form-block-title">Отчество:</span>
+									<input type="text" class="input" value="Иванович">
+								</label>
+							</div>
+							<div class="cabinet-profile-form-col flex-row-item">
+								<label class="form-block">
+									<span class="form-block-title">Мобильный телефон:</span>
+									<input type="tel" class="input" value="+7 (000) 000-00-00" required>
+								</label>
+							</div>
+							<div class="cabinet-profile-form-col flex-row-item">
+								<label class="form-block">
+									<span class="form-block-title">Электронная почта:</span>
+									<input type="email" class="input" value="mail@mail.ru" required>
+								</label>
+							</div>
+							<div class="cabinet-profile-form-col flex-row-item"></div>
+							<div class="cabinet-profile-form-col flex-row-item">
+								<label class="form-block">
+									<span class="form-block-title">Дата рождения:</span>
+									<input type="date" class="input" value="1990-05-09">
+								</label>
+							</div>
+							<div class="cabinet-profile-form-col flex-row-item">
+								<div class="form-block">
+									<span class="form-block-title">Пол:</span>
+									<ul class="radio-btns">
+										<li>
+											<label class="radio-label radio-ladel-btn active">
+												<input type="radio" class="radio-input" name="cabinet-profile-gender" value="Мужской" checked>
+												<span>Мужской</span>
+											</label>
+										</li>
+										<li>
+											<label class="radio-label radio-ladel-btn">
+												<input type="radio" class="radio-input" name="cabinet-profile-gender" value="Женский">
+												<span>Женский</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="cabinet-profile-form-submit-wrapp submit-wrapp">
+							<label class="checkbox-label">
+								<input type="checkbox" class="checkbox-input">
+								<span>Хочу участвовать в скидках, акциях и распродажах.</span>
+							</label>
+							<button type="submit" class="btn btn-green submit" disabled>Сохранить изменения</button>
+						</div>
+					</form>
+				</div>
+				<div class="cabinet-section hidden-desktop">
+					<div class="cabinet-profile-del">
+						<div class="cabinet-profile-del-title">Удалить личный кабинет</div>
+						<div class="cabinet-profile-del-desc">
+							<p>Обращаем внимание, что при удалении личного кабинета будут обнулены все накопленные вами проценты. 
+							<p>Как только ваш Личный кабинет будет удален, вы автоматически выйдете из системы и больше не сможете войти в этот аккаунт.
+						</div>
+						<a href="#" class="cabinet-profile-del-btn btn submit">Удалить личный кабинет</a>
+					</div>
+				</div>
+			</div>
+			<div class="cabinet-profile-sidebar">
+				<div class="cabinet-section cabinet-section-profile-password">
+					<div class="cabinet-section-title">Изменить пароль</div>
+					<form action="?" class="cabinet-password-form ordering-form form">
+						<label class="form-block form-block-password">
+							<span class="form-block-title">Пароль (Тот, что сейчас)</span>
+							<span class="input-wrapp">
+								<input type="password" class="input" required>
+								<a href="#" class="password-input-type-toggle">
+									<svg width="18" height="18"><use xlink:href="#icon-eye-open"/></svg>
+									<svg width="18" height="18"><use xlink:href="#icon-eye-close"/></svg>
+								</a>
+							</span>
+						</label>
+						<label class="form-block form-block-password">
+							<span class="form-block-title">Новый пароль</span>
+							<span class="input-wrapp">
+								<input type="password" pattern=".{8,}" class="input" required>
+								<a href="#" class="password-input-type-toggle">
+									<svg width="18" height="18"><use xlink:href="#icon-eye-open"/></svg>
+									<svg width="18" height="18"><use xlink:href="#icon-eye-close"/></svg>
+								</a>
+							</span>
+							<span class="form-block-desc">Пароль должен быть не меньше 8 символов</span>
+						</label>
+						<label class="form-block form-block-password">
+							<span class="form-block-title">Новый пароль</span>
+							<span class="input-wrapp">
+								<input type="password" class="input" pattern=".{8,}" required>
+								<a href="#" class="password-input-type-toggle">
+									<svg width="18" height="18"><use xlink:href="#icon-eye-open"/></svg>
+									<svg width="18" height="18"><use xlink:href="#icon-eye-close"/></svg>
+								</a>
+							</span>
+						</label>
+						<div class="submit-wrapp">
+							<button type="submit" class="btn btn-green submit" disabled>Сохранить изменения</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="cabinet-profile-del visible-desktop">
+				<div class="cabinet-profile-del-title">Удалить личный кабинет</div>
+				<div class="cabinet-profile-del-desc">
+					<p>Обращаем внимание, что при удалении личного кабинета будут обнулены все накопленные вами проценты. 
+					<p>Как только ваш Личный кабинет будет удален, вы автоматически выйдете из системы и больше не сможете войти в этот аккаунт.
+				</div>
+				<a href="#" class="cabinet-profile-del-btn btn submit">Удалить личный кабинет</a>
+			</div>
+		</div>
+	</div>
+</main>
+@@include('footer.html')

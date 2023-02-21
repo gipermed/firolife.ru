@@ -1,0 +1,109 @@
+@@include('header.html', {
+	"page": "ordering"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Главная</a></li>
+			<li>Оформление заказа</li>
+		</ul>
+		<h1 class="section-title">Оформление заказа</h1>
+		@@include('ordering-steps.html', {
+			"delivery": true,
+			"confirm": true
+		})
+		<div class="ordering-section section">
+			<div class="ordering-section-title">Заказ получит:</div>
+			<div class="ordering-section-body">
+				<div class="ordering-confirm-user section">
+					<div class="ordering-confirm-user-title">Фамилия Имя</div>
+					<ul class="ordering-confirm-user-contacts">
+						<li>+7 (000) 000-00-00
+						<li>mail@mail.ru
+					</ul>
+				</div>
+				<div class="ordering-confirm-cart">
+					<div class="ordering-confirm-cart-title">Ваш заказ</div>
+					<div class="ordering-confirm-items">
+						@@for(var i = 0; i < 2; i++){
+							<div class="ordering-confirm-item ordering-confirm-product">
+								<div class="ordering-confirm-item-body">
+									<div class="cart-item-product ordering-confirm-item-product">
+										<a href="#" class="item-link" aria-label="На страницу продукта"></a>
+										<div class="cart-item-product-img">
+											<img src="img/cart-item-product-img.jpg" srcset="img/cart-item-product-img@2x.jpg" alt="">
+										</div>
+										<div class="cart-item-product-body">
+											<div class="cart-item-product-title">Ортопедическая подушка под голову Qmed STANDARD</div>
+											<div class="cart-item-product-code">Артикул: <b>0123912-Qm-S</b></div>
+											<ul class="cart-item-product-info">
+												<li>Цвет: белый
+												<li>Размер: М
+											</ul>
+										</div>
+									</div>
+									<div class="ordering-confirm-item-info">
+										<div class="ordering-confirm-item-number">Количество: 1 шт</div>
+										<div class="ordering-confirm-item-price">5 094 ₽</div>
+									</div>
+								</div>
+							</div>
+						}
+						<div class="ordering-confirm-item">
+							<div class="ordering-confirm-item-body">
+								<div class="ordering-confirm-item-delivery-title">Доставка</div>
+								<div class="ordering-confirm-item-delivery-info">
+									<p>Доставка заказа курьером ТК Dali
+									<p>Дата получения: 24 марта 2021 г
+									<p>Москва, ул. Летная, д. 7, стр. 4
+								</div>
+								<div class="ordering-confirm-item-delivery-price ordering-confirm-item-price">195 ₽</div>
+							</div>
+						</div>
+						<div class="ordering-confirm-item ordering-confirm-cost">
+							<div class="ordering-confirm-item-body">
+								<div class="ordering-confirm-item-total-title">Итоговая стоимость:</div>
+								<div class="ordering-confirm-item-total-price">45 032 ₽</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<form action="?" class="ordering-form ordering-payment-form form">
+					<div class="ordering-payment">
+						<div class="ordering-payment-title">Способ оплаты</div>
+						<ul class="checkbox-list">
+							<li>
+								<label class="radio-label">
+									<input type="radio" class="radio-input" name="ordering-payment" required>
+									<span>Онлайн оплата</span>
+								</label>
+							</li>
+							<li>
+								<label class="radio-label">
+									<input type="radio" class="radio-input" name="ordering-payment" required>
+									<span>Оплата наличными при получении</span>
+								</label>
+							</li>
+							<li>
+								<label class="radio-label">
+									<input type="radio" class="radio-input" name="ordering-payment" required>
+									<span>Оплата банковской картой при получении</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+					<div class="ordering-comment">
+						<label class="form-block">
+							<span class="form-block-title">Комментарий к заказу:</span>
+							<textarea class="input textarea" placeholder="Оставьте ваш комментарий"></textarea>
+						</label>
+					</div>
+					<div class="submit-wrapp">
+						<button class="btn btn-green submit" disabled>Подтвердить заказ&nbsp;&#62;</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</main>
+@@include('footer.html')

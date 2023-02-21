@@ -1,0 +1,29 @@
+@@include('header.html', {
+	"page": "cart"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Главная</a></li>
+			<li>Корзина</li>
+		</ul>
+		<div class="cart-head">
+			<h1 class="section-title">Корзина</h1>
+			<div class="cart-count">12 товаров</div>
+		</div>
+		@@include('cart.html')
+		<div class="section similar-products-section">
+			<div class="container">
+				<div class="section-title">С этим товаром покупают</div>
+				@@include('products-slider.html')
+			</div>
+		</div>
+		<div class="section viewed-products-section">
+			<div class="container">
+				<div class="section-title">Просмотренные товары</div>
+				@@include('products-slider.html')
+			</div>
+		</div>
+	</div>
+</main>
+@@include('footer.html')

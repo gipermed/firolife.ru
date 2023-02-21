@@ -1,0 +1,55 @@
+@@include('header.html', {
+	"page": "cabinet"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Личный кабинет</a></li>
+			<li><a href="#">Заказы</a></li>
+			<li>Текущие заказы</li>
+		</ul>
+		@@include('cabinet-nav.html', {
+			"active": "orders"
+		})
+		<ul class="cabinet-page-nav tabs-nav-default">
+			<li class="active"><a href="#">Текущие заказы</a></li>
+			<li><a href="#">Все заказы</a></li>
+		</ul>
+		<div class="cabinet cabinet-orders">
+			<div class="cabinet-section-title">Текущие заказы</div>
+			<div class="orders">
+				@@loop('order-item.html', [
+					{
+						"state": {
+							"class": "delivered",
+							"text": "Доставлен"
+						},
+						"delete": true
+					},
+					{
+						"state": {
+							"class": "canceled",
+							"text": "Отменён"
+						},
+						"delete": true
+					},
+					{
+						"state": {
+							"class": "delivered",
+							"text": "Доставлен"
+						},
+						"delete": true
+					},
+					{
+						"state": {
+							"class": "return",
+							"text": "Возврат"
+						},
+						"delete": true
+					},
+				])
+			</div>
+		</div>
+	</div>
+</main>
+@@include('footer.html')

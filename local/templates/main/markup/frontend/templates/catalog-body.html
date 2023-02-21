@@ -1,0 +1,96 @@
+<div class="catalog-body">
+	@@if(context.sort){
+		@@include('catalog-sort.html')
+	}
+	<div class="catalog-row products-row flex-row">
+		@@if(context.adult){
+			@@for(var i = 0; i < 4; i++){
+				@@loop('products-col.html', [
+					{
+						"img": "no",
+						"stiker": {
+							"type": "new",
+							"text": "Новинка"
+						},
+						"title": "Жгут резиновый Эсмарха для оперативной остановки кровотечения<br> Meridian",
+						"cost": "2 088 ₽",
+						"adult": true
+					},
+					{
+						"img": 2,
+						"stiker": {
+							"type": "sale",
+							"text": "Скидка"
+						},
+						"title": "Грелка комбинированная (кружка Эсмарха) 1л<br> Meridian",
+						"sale": true,
+						"cost": "145 ₽",
+						"adult": true
+					},
+					{
+						"img": 3,
+						"stiker": {
+							"type": "hit",
+							"text": "Хит"
+						},
+						"title": "Антисептик с распылителем 1 000 мл<br> Дезон",
+						"cost": "547 ₽",
+						"adult": true
+					},
+					{
+						"img": 1,
+						"title": "Жгут резиновый Эсмарха для оперативной остановки кровотечения<br> Meridian",
+						"cost": "2 088 ₽",
+						"adult": true
+					},
+				])
+			}
+		}
+		@@if(!context.adult){
+			@@for(var i = 0; i < 4; i++){
+				@@loop('products-col.html', [
+					{
+						"img": "no",
+						"stiker": {
+							"type": "new",
+							"text": "Новинка"
+						},
+						"title": "Жгут резиновый Эсмарха для оперативной остановки кровотечения<br> Meridian",
+						"cost": "2 088 ₽"
+					},
+					{
+						"img": 2,
+						"stiker": {
+							"type": "sale",
+							"text": "Скидка"
+						},
+						"title": "Грелка комбинированная (кружка Эсмарха) 1л<br> Meridian",
+						"sale": true,
+						"cost": "145 ₽",
+						"state": 'on-order'
+					},
+					{
+						"img": 3,
+						"stiker": {
+							"type": "hit",
+							"text": "Хит"
+						},
+						"title": "Антисептик с распылителем 1 000 мл<br> Дезон",
+						"cost": "547 ₽",
+						"state": 'not-available'
+					},
+					{
+						"img": 1,
+						"title": "Жгут резиновый Эсмарха для оперативной остановки кровотечения<br> Meridian",
+						"cost": "2 088 ₽",
+						"state": 'expected'
+					},
+				])
+			}
+		}
+	</div>
+	<div class="read-more-btn-wrapp visible-mobile">
+		<a href="#" class="read-more-btn catalog-view-more-btn btn">Показать больше</a>
+	</div>
+	@@include('pagination.html')
+</div>

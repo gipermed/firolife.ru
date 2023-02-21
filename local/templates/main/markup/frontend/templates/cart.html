@@ -1,0 +1,64 @@
+<div class="cart section">
+	<div class="cart-body">
+		<div class="cart-nav">
+			<label class="cart-select-all checkbox-label">
+				<input type="checkbox" class="checkbox-input">
+				<span>Выбрать все</span>
+			</label>
+			<a href="#" class="cart-clear-btn">
+				<span>Очистить корзину</span>
+			</a>
+		</div>
+		<div class="cart-items">
+			@@loop('cart-item.html', [
+				{
+					"sale": true,
+					"number": 2
+				},
+				{
+					"sale": true,
+				},
+				{
+					"sale": false,
+				},
+				{
+					"sale": true,
+				},
+				{
+					"sale": true,
+				}
+			])
+		</div>
+	</div>
+	<div class="cart-sidebar">
+		<div class="cart-sidebar-desc">Точные стоимость и дату доставки можно будет посмотреть при оформении заказа </div>
+		<div class="cart-sidebar-order">
+			<div class="cart-sidebar-order-title">Ваш заказ</div>
+			<div class="cart-sidebar-order-info">
+				<div class="cart-sidebar-order-info-title">Товары (5)</div>
+				<div class="cart-sidebar-order-info-sum">46 823 ₽</div>
+			</div>
+			<div class="cart-sidebar-order-info cart-sidebar-order-info-sale">
+				<div class="cart-sidebar-order-info-title">Скидка</div>
+				<div class="cart-sidebar-order-info-sum">- 1 729 ₽</div>
+			</div>
+		</div>
+		<form action="?" class="cart-promo form hidden-mobile">
+			<label class="form-block" aria-label="Введите промокод">
+				<input type="text" class="input" placeholder="Введите промокод" required>
+			</label>
+			<button type="submit" class="btn submit">Применить</button>
+		</form>
+		<div class="cart-sidebar-total">
+			<div class="cart-sidebar-total-title">Итого</div>
+			<div class="cart-sidebar-total-sum">45 094 ₽</div>
+		</div>
+		<a href="#" class="btn btn-full btn-green cart-btn">Перейти к оформлению</a>
+	</div>
+	<form action="?" class="cart-promo form visible-mobile">
+		<label class="form-block" aria-label="Введите промокод">
+			<input type="text" class="input" placeholder="Введите промокод" required>
+		</label>
+		<button type="submit" class="btn submit">Применить</button>
+	</form>
+</div>

@@ -1,0 +1,175 @@
+@marginBottom:15px;
+@marginBottomMobile:10px;
+
+.content-text{
+	@media @xs{
+		padding-left:8px;
+		padding-right:8px;
+	}
+	p,
+	ol,
+	ul{
+		margin-bottom:@marginBottom;
+		@media @sm{
+			margin-bottom:@marginBottomMobile;
+		}
+		&:last-child{
+			margin-bottom:0;
+		}
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6{
+		margin-bottom:20px;
+		font-weight:600;
+		text-align:center;
+		text-transform:uppercase;
+		@media @sm{
+			margin-bottom:@marginBottom;
+		}
+		&:last-child{
+			margin-bottom:0;
+		}
+	}
+	h1{
+		.section-title;
+	}
+	h2{
+		font-size:18px;
+		@media @sm{
+			font-size:15px;
+		}
+	}
+	h3{
+		font-size:15px;
+		color:@link;
+		@media @sm{
+			font-size:13px;
+		}
+	}
+	h4,
+	h5,
+	h6{
+		font-size:13px;
+		@media @sm{
+			font-size:11px;
+		}
+	}
+	a{
+		display:inline-flex;
+		align-items:center;
+		transition:.4s;
+		font-weight:500;
+		text-decoration:underline;
+		color:inherit;
+		&:hover{
+			color:@link;
+		}
+		&>*:not(:last-child){
+			margin-right:12px;
+		}
+		svg{
+			flex:none;
+		}
+		&[href^="tel:"]{
+			white-space:nowrap;
+		}
+	}
+	b,
+	strong{
+		font-weight:600;
+	}
+	ol{
+		list-style:none;
+		counter-reset:counter;
+		overflow:hidden;
+		li{
+			margin-bottom:5px;
+			&:last-child{
+				margin-bottom:0;
+			}
+			&:before{
+				content:counters(counter,'\00A0')'\00A0';
+			}
+		}
+	}
+	ul{
+		overflow:hidden;
+		li{
+			margin-bottom:5px;
+			&:last-child{
+				margin-bottom:0;
+			}
+			&:before{
+				content:'\2022\00A0';
+			}
+		}
+	}
+	img{
+		display:block;
+		height:auto;
+	}
+	iframe{
+		max-width:100%;
+		margin:@marginBottom auto;
+		display:block;
+		@media @sm{
+			height:320px;
+		}
+		@media @xs{
+			height:280px;
+		}
+	}
+	.section,
+	section{
+		margin-bottom:30px;
+		&:last-child{
+			margin-bottom:0;
+		}
+	}
+}
+
+.img{
+	display:block;
+	margin:20px 0;
+	&:first-child{
+		margin-top:0;
+	}
+	&:last-child{
+		margin-top:0;
+	}
+	@media @xs{
+		margin:15px -8px;
+	}
+	img{
+		display:block;
+		border:solid 1px @border_;
+	}
+}
+
+.img-left{
+	@media @xs_{
+		float:left;
+		margin-right:26px;
+		max-width:50%;
+		margin-top:0;
+	}
+}
+
+.img-right{
+	@media @xs_{
+		float:right;
+		margin-left:26px;
+		max-width:50%;
+		margin-top:0;
+	}
+}
+
+
+
+
+
+

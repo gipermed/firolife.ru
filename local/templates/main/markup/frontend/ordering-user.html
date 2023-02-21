@@ -1,0 +1,112 @@
+@@include('header.html', {
+	"page": "ordering"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Главная</a></li>
+			<li>Оформление заказа</li>
+		</ul>
+		<h1 class="section-title">Оформление заказа</h1>
+		@@include('ordering-steps.html')
+		<div class="ordering section">
+			<div class="ordering-body">
+				<div class="ordering-section section">
+					<div class="ordering-section-title">
+						<span>Получатель заказа:</span>
+					</div>
+					<div class="ordering-section-body">
+						<div class="ordering-registration-info">
+							<div class="ordering-registration-info-desc">Если вы зарегистрированы, <a href="#modal-enter" class="modal-open-btn">авторизуйтесь</a> и вам не придется вводить данные о себе.</div>
+							<div class="ordering-form-required-info visible-mobile">* — поля обязательные для заполнения</div>
+						</div>
+						<form action="?" class="ordering-form form">
+							<div class="ordering-form-inputs">
+								<div class="form-row flex-row">
+									<div class="form-col flex-row-item">
+										<label class="form-block">
+											<span class="form-block-title">Фамилия:*</span>
+											<input type="text" class="input" placeholder="Введите фамилию" required>
+										</label>
+									</div>
+									<div class="form-col flex-row-item">
+										<label class="form-block">
+											<span class="form-block-title">Имя:*</span>
+											<input type="text" class="input" placeholder="Введите имя" required>
+										</label>
+									</div>
+									<div class="form-col flex-row-item">
+										<label class="form-block">
+											<span class="form-block-title">Номер телефона:*</span>
+											<input type="tel" class="input" placeholder="+7 (___) ___-__-__" required>
+										</label>
+									</div>
+									<div class="form-col flex-row-item">
+										<label class="form-block">
+											<span class="form-block-title">Электронная почта:*</span>
+											<input type="email" class="input" placeholder="Введите e-mail" required>
+										</label>
+									</div>
+								</div>
+							</div>
+							<ul class="checkbox-list">
+								<li>
+									<label class="checkbox-label">
+										<input type="checkbox" class="checkbox-input">
+										<span>Подписаться на рассылку</span>
+									</label>
+								</li>
+								<li>
+									<label class="checkbox-label">
+										<input type="checkbox" class="checkbox-input" required>
+										<span>Соглашаюсь с <a href="#">политикой конфеденциальности</a></span>
+									</label>
+								</li>
+							</ul>
+							<ul class="ordering-form-btns">
+								<li>
+									<a href="#" class="btn ordering-form-back-btn">&#60;&nbsp;Назад <span class="visible-mobile">в корзину</span></a>
+								</li>
+								<li class="visible-mobile">
+									<div class="ordering-form-next-step-info">На следующем этапе выберите пункт самовывоза или оформите доставку</div>
+								</li>
+								<li>
+									<button class="btn btn-green submit" disabled>Способ получения&nbsp;&#62;</button>
+								</li>
+							</ul>
+							<div class="ordering-form-info hidden-mobile">
+								<div class="ordering-form-required-info">* — поля обязательные для заполнения</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				@@include('ordering-sidebar.html', {
+					"class": "visible-desktop",
+				})
+				<div class="ordering-section ordering-section-cart section">
+					<div class="ordering-section-title ordering-section-title-toggle">
+						<span>Состав заказа</span>
+						<i><svg width="24" height="24"><use xlink:href="#icon-chevron-down"/></svg></i>
+					</div>
+					<div class="ordering-section-body">
+						<div class="cart-items">
+							@@loop('cart-item.html', [
+								{
+									"sale": true,
+									"number": 2
+								},
+								{
+									"sale": true,
+								}
+							])
+						</div>
+					</div>
+				</div>
+			</div>
+			@@include('ordering-sidebar.html', {
+				"class": "hidden-desktop",
+			})
+		</div>
+	</div>
+</main>
+@@include('footer.html')

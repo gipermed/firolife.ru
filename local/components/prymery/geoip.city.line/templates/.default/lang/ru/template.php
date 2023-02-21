@@ -1,0 +1,9 @@
+<?
+	$PRYMERY_COMPONENT_NAME = 'PRYMERY.GEOIP.CITY.LINE';
+
+	$MESS[$PRYMERY_COMPONENT_NAME . "_MODULE_NOT_INSTALLED"] = 'Модуль «Определение местоположения по IP 2.0» не установлен';
+	$MESS[$PRYMERY_COMPONENT_NAME . 'CITY_DEFAULT'] = 'Москва';
+	$MESS[$PRYMERY_COMPONENT_NAME . 'BTN_NO'] = 'Другой';
+	$MESS[$PRYMERY_COMPONENT_NAME . 'BTN_YES'] = 'Верно';
+
+

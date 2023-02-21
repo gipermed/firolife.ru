@@ -1,0 +1,231 @@
+@@include('header.html', {
+	"page": "contacts"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Главная</a></li>
+			<li>Контакты</li>
+		</ul>
+		<h1 class="section-title">Контакты</h1>
+		<div class="contacts-section section">
+			<div class="content-title">Интернет - магазин</div>
+			<div class="contacts-internet">
+				<div class="contacts-internet-block contacts-internet-tels">
+					<div class="contacts-internet-tels-title">Телефон:</div>
+					@@include('contacts-tels.html')
+				</div>
+				<div class="contacts-internet-block">
+					<div class="contacts-internet-title">Приём звонков:</div>
+					<div class="contacts-internet-desc">Ежедневно:&nbsp; <b>9-00 - 21-00</b></div>
+				</div>
+				<div class="contacts-internet-block">
+					<div class="contacts-internet-title">Заказы принимаются круглосуточно</div>
+				</div>
+			</div>
+			<div class="contacts-internet-info">*Часы работы указаны по московскому времени.</div>
+		</div>
+		<div class="contacts-section section">
+			<div class="content-title">Адреса магазинов</div>
+			<div class="contacts-shop section" data-lat="55.736640" data-lng="37.465982">
+				<div class="contacts-shop-row flex-row">
+					<div class="contacts-shop-col flex-row-item">
+						<div class="contacts-shop-title">Магазин на Пионерской</div>
+						<div class="contacts-shop-row flex-row">
+							<div class="contacts-shop-col flex-row-item">
+								<ul class="contacts-shop-info">
+									<li>Телефон: <a href="tel:84954816068">8 495 481-60-68</a></li>
+									<li>
+										<p>Режим работы:
+										<p><span>Ежедневно:&nbsp;</span> 9-00 - 20-00
+									</li>
+									<li>Адрес: <b class="contacts-shop-address">г. Москва,<br> ул. Малая Филёвская, д. 22</b></li>
+									<li>
+										<div class="contacts-shop-metro">
+											<i style="color:#2BA2D5;"></i>
+											Метро Пионерская
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="contacts-shop-col hidden-tablet">
+								<a href="img/shop-img-1-full.jpg" class="contacts-shop-img cover-img" data-fancybox="shop-1">
+									<img src="img/shop-img-1.jpg" srcset="img/shop-img-1@2x.jpg 2x" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="contacts-shop-slider swiper-container">
+							@@include('slider-arrows.html')
+							<div class="swiper-wrapper">
+								<div class="contacts-shop-slide swiper-slide visible-tablet">
+									<a href="img/shop-img-1-full.jpg" class="contacts-shop-img cover-img">
+										<img src="img/shop-img-1.jpg" srcset="img/shop-img-1@2x.jpg 2x" alt="">
+									</a>
+								</div>
+								<div class="contacts-shop-slide swiper-slide">
+									<a href="img/shop-img-2-full.jpg" class="contacts-shop-img cover-img" data-fancybox="shop-1">
+										<img src="img/shop-img-2.jpg" srcset="img/shop-img-2@2x.jpg 2x" alt="">
+									</a>
+								</div>
+								<div class="contacts-shop-slide swiper-slide">
+									<a href="img/shop-img-3-full.jpg" class="contacts-shop-img cover-img" data-fancybox="shop-1">
+										<img src="img/shop-img-3.jpg" srcset="img/shop-img-3@2x.jpg 2x" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="contacts-shop-col flex-row-item">
+						<div class="contacts-shop-schema">
+							<div class="contacts-shop-schema-title">Как добраться до магазина</div>
+							<a href="#" class="contacts-shop-schema-print hidden-tablet">
+								<svg width="20" height="20"><use xlink:href="#icon-print"/></svg>
+								<span>Распечатать схему</span>
+							</a>
+						</div>
+						<div class="contacts-shop-schema-img">
+							<a href="img/shop-schema-1-full.jpg" class="contacts-shop-img cover-img" data-fancybox>
+								<img src="img/shop-schema-1.jpg" srcset="img/shop-schema-1@2x.jpg 2x" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contacts-shop section" data-lat="55.791633" data-lng="37.820241">
+				<div class="contacts-shop-row flex-row">
+					<div class="contacts-shop-col flex-row-item">
+						<div class="contacts-shop-title">Магазин на Первомайской</div>
+						<div class="contacts-shop-row flex-row">
+							<div class="contacts-shop-col flex-row-item">
+								<ul class="contacts-shop-info">
+									<li>Телефон: <a href="tel:84954817114">8 495 481-71-14</a></li>
+									<li>
+										<p>Режим работы:
+										<p><span>Ежедневно:&nbsp;</span> 9-00 - 20-00
+									</li>
+									<li>Адрес: <b class="contacts-shop-address">г. Москва,<br> ул. Нижняя Первомайская, д. 77</b></li>
+									<li>
+										<div class="contacts-shop-metro">
+											<i style="color:#2BA2D5;"></i>
+											Метро Первомайская
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="contacts-shop-col hidden-tablet">
+								<a href="img/shop-img-4-full.jpg" class="contacts-shop-img cover-img" data-fancybox="shop-2">
+									<img src="img/shop-img-4.jpg" srcset="img/shop-img-4@2x.jpg 2x" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="contacts-shop-slider swiper-container">
+							@@include('slider-arrows.html')
+							<div class="swiper-wrapper">
+								<div class="contacts-shop-slide swiper-slide visible-tablet">
+									<a href="img/shop-img-4-full.jpg" class="contacts-shop-img cover-img">
+										<img src="img/shop-img-4.jpg" srcset="img/shop-img-4@2x.jpg 2x" alt="">
+									</a>
+								</div>
+								<div class="contacts-shop-slide swiper-slide">
+									<a href="img/shop-img-4-full.jpg" class="contacts-shop-img cover-img" data-fancybox="shop-2">
+										<img src="img/shop-img-4.jpg" srcset="img/shop-img-4@2x.jpg 2x" alt="">
+									</a>
+								</div>
+								<div class="contacts-shop-slide swiper-slide">
+									<a href="img/shop-img-4-full.jpg" class="contacts-shop-img cover-img" data-fancybox="shop-2">
+										<img src="img/shop-img-4.jpg" srcset="img/shop-img-4@2x.jpg 2x" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="contacts-shop-col flex-row-item">
+						<div class="contacts-shop-schema">
+							<div class="contacts-shop-schema-title">Как добраться до магазина</div>
+							<a href="#" class="contacts-shop-schema-print hidden-tablet">
+								<svg width="20" height="20"><use xlink:href="#icon-print"/></svg>
+								<span>Распечатать схему</span>
+							</a>
+						</div>
+						<div class="contacts-shop-schema-img">
+							<a href="img/shop-schema-2-full.jpg" class="contacts-shop-img cover-img" data-fancybox>
+								<img src="img/shop-schema-2.jpg" srcset="img/shop-schema-2@2x.jpg 2x" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contacts-shop section" data-lat="55.807607" data-lng="37.464994">
+				<div class="contacts-shop-row flex-row">
+					<div class="contacts-shop-col flex-row-item">
+						<div class="contacts-shop-title">Магазин на Щукинской</div>
+						<div class="contacts-shop-row flex-row">
+							<div class="contacts-shop-col flex-row-item">
+								<ul class="contacts-shop-info">
+									<li>Телефон: <a href="tel:84954817134">8 495 481-71-34</a></li>
+									<li>
+										<p>Режим работы:
+										<p><span>Ежедневно:&nbsp;</span> 9-00 - 20-00
+									</li>
+									<li>Адрес: <b class="contacts-shop-address">г. Москва,<br> ул. Маршала Василевского, д. 15<br> ТЦ "Щучка"</b></li>
+									<li>
+										<div class="contacts-shop-metro">
+											<i style="color:#833AB4;"></i>
+											Метро Щукинская
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="contacts-shop-col hidden-tablet">
+								<a href="img/shop-img-5-full.jpg" class="contacts-shop-img cover-img" data-fancybox="shop-3">
+									<img src="img/shop-img-5.jpg" srcset="img/shop-img-5@2x.jpg 2x" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="contacts-shop-slider swiper-container">
+							@@include('slider-arrows.html')
+							<div class="swiper-wrapper">
+								<div class="contacts-shop-slide swiper-slide visible-tablet">
+									<a href="img/shop-img-5-full.jpg" class="contacts-shop-img cover-img">
+										<img src="img/shop-img-5.jpg" srcset="img/shop-img-5@2x.jpg 2x" alt="">
+									</a>
+								</div>
+								<div class="contacts-shop-slide swiper-slide">
+									<a href="img/shop-img-5-full.jpg" class="contacts-shop-img cover-img" data-fancybox="shop-3">
+										<img src="img/shop-img-5.jpg" srcset="img/shop-img-5@2x.jpg 2x" alt="">
+									</a>
+								</div>
+								<div class="contacts-shop-slide swiper-slide">
+									<a href="img/shop-img-5-full.jpg" class="contacts-shop-img cover-img" data-fancybox="shop-3">
+										<img src="img/shop-img-5.jpg" srcset="img/shop-img-5@2x.jpg 2x" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="contacts-shop-col flex-row-item">
+						<div class="contacts-shop-schema">
+							<div class="contacts-shop-schema-title">Как добраться до магазина</div>
+							<a href="#" class="contacts-shop-schema-print hidden-tablet">
+								<svg width="20" height="20"><use xlink:href="#icon-print"/></svg>
+								<span>Распечатать схему</span>
+							</a>
+						</div>
+						<div class="contacts-shop-schema-img">
+							<a href="img/shop-schema-3-full.jpg" class="contacts-shop-img cover-img" data-fancybox>
+								<img src="img/shop-schema-3.jpg" srcset="img/shop-schema-3@2x.jpg 2x" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="contacts-section section">
+			<div class="contacts-map-title">Магазины на карте</div>
+			<div class="contacts-map-wrapp">
+				<div class="contacts-map" data-lat="55.755819" data-lng="37.617644" data-zoom="11" data-zoom-mobile="9"></div>
+			</div>
+		</div>
+	</div>
+</main>
+@@include('footer.html')

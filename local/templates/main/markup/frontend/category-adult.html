@@ -1,0 +1,60 @@
+@@include('header.html', {
+	"page": "category is-not-adult",
+	"inCart": true,
+	"inFavorites": true
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Главная</a></li>
+			<li><a href="#">Категории</a></li>
+			<li>Товары для взрослых</li>
+		</ul>
+		<div class="catalog-head">
+			<div class="catalog-nav">
+				<div class="catalog-nav-open">
+					<h1 class="section-title">Товары для взрослых</h1>
+					<i class="visible-tablet"><svg width="24" height="24"><use xlink:href="#icon-chevron-down"/></svg></i>
+				</div>
+				<div class="catalog-menu-mobile visible-tablet">
+					<ul class="catalog-menu-mobile-list">
+						<li><a href="#">Интимная гигиена</a></li>
+						<li><a href="#">Товары для взрослых</a></li>
+						<li><a href="#">Товары для взрослых</a></li>
+						<li><a href="#">Товары для взрослых</a></li>
+						<li><a href="#">Товары для взрослых</a></li>
+						<li><a href="#">Товары для взрослых</a></li>
+					</ul>
+				</div>
+			</div>
+			@@include('catalog-sort.html')
+		</div>
+		<div class="catalog">
+			<aside class="catalog-sidebar">
+				<div class="catalog-menu hidden-tablet">
+					<ul class="catalog-menu-list">
+						<li><a href="#">&#60;&nbsp;Все товары</a></li>
+						<li>
+							<div class="catalog-menu-nav-current">Товары для взрослых</div>
+						</li>
+					</ul>
+					<ul class="catalog-menu-list catalog-menu-list-inside">
+						<li><a href="#">Интимная гигиена</a></li>
+						<li><a href="#">Товары для взрослых</a></li>
+						<li><a href="#">Товары для взрослых</a></li>
+						<li><a href="#">Товары для взрослых</a></li>
+						<li><a href="#">Товары для взрослых</a></li>
+						<li><a href="#">Товары для взрослых</a></li>
+					</ul>
+				</div>
+				@@include('catalog-filter.html')
+			</aside>
+			@@include('catalog-body.html', {
+				"adult": true
+			})
+		</div>
+	</div>
+</main>
+@@include('footer.html', {
+	"adult": true
+})

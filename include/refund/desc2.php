@@ -1,0 +1,1 @@
+<span>Направить заявления на возврат денежных средств и на возврат товара покупателя можно на электронную почту</span> <a href="mailto:info@firolife.ru" target="_blank">info@firolife.ru</a>

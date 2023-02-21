@@ -1,0 +1,120 @@
+@@include('header.html', {
+	"page": "cabinet"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Личный кабинет</a></li>
+			<li>Главная</li>
+		</ul>
+		@@include('cabinet-nav.html', {
+			"active": "main"
+		})
+		<div class="cabinet-main">
+			<div class="cabinet-main-body">
+				<div class="cabinet-main-row flex-row">
+					<div class="cabinet-main-col cabinet-main-col-orders flex-row-item">
+						<div class="cabinet-main-item cabinet-main-item-orders">
+							<div class="cabinet-main-item-title">Заказы</div>
+							<div class="cabinet-main-item-body">
+								<div class="cabinet-main-item-icon">
+									<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M55.9891 13.8111C55.9237 13.2088 55.5494 12.6757 54.9899 12.4146L28.7399 0.164633C28.2708 -0.0542266 27.729 -0.0542266 27.2599 0.164633L1.00986 12.4146C0.450516 12.6757 0.0762344 13.2087 0.0107187 13.8111C0.00929687 13.8237 0 13.9913 0 14.0005V43.7505C0 44.466 0.435641 45.1096 1.10009 45.3752L27.3501 55.8753C27.5587 55.9587 27.7794 56.0005 28 56.0005C28.2206 56.0005 28.4413 55.9588 28.6499 55.8753L54.8999 45.3752C55.5644 45.1096 56 44.466 56 43.7505V14.0005C56 13.9913 55.9905 13.8236 55.9891 13.8111ZM28 3.68159L49.847 13.8769L41.4345 17.2419L19.1764 7.79934L28 3.68159ZM14.9089 9.79084L36.8218 19.087L28 22.6156L6.153 13.8769L14.9089 9.79084ZM3.5 16.5852L26.25 25.6852V51.6656L3.5 42.5656V16.5852ZM29.75 51.6657V25.6852L52.5 16.5852V42.5656L29.75 51.6657Z" fill="black"/>
+									</svg>
+								</div>
+								<div class="cabinet-main-item-content">
+									<div class="cabinet-main-item-content-title">Текущие заказы</div>
+									<div class="cabinet-main-item-content-desc">у вас нет оформленных заказов</div>
+									<div class="cabinet-main-item-content-links">
+										<a href="#" class="cabinet-main-item-content-link">Посмотреть все заказы</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cabinet-main-col cabinet-main-col-loyalty flex-row-item">
+						<div class="cabinet-main-item cabinet-main-item-discount">
+							<div class="cabinet-main-item-title">Программа лояльности</div>
+							<div class="cabinet-main-item-body">
+								<div class="cabinet-main-item-icon">0%</div>
+								<div class="cabinet-main-item-content">
+									<div class="cabinet-main-item-content-title">Скидка</div>
+									<div class="cabinet-main-item-content-desc">
+										<p>Номер бонусной карты: <b>000243</b>
+										<p>Товаров приобретено на сумму: <b>0 ₽</b>
+									</div>
+									<div class="cabinet-main-item-content-links">
+										<a href="#" class="cabinet-main-item-content-link">Подробнее</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cabinet-main-col cabinet-main-col-profile flex-row-item">
+						<div class="cabinet-main-item cabinet-main-item-profile">
+							<div class="cabinet-main-item-title">Профиль</div>
+							<div class="cabinet-main-item-body">
+								<div class="cabinet-main-item-icon">
+									<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M51.0781 5.46924H4.92188C2.20795 5.46924 0 7.67719 0 10.3911V35.3286C0 38.0425 2.20795 40.2505 4.92188 40.2505H7.10938V47.2505C7.10938 49.0598 8.58134 50.5317 10.3906 50.5317H22.8594C24.6687 50.5317 26.1406 49.0598 26.1406 47.2505V40.2505H51.0781C53.792 40.2505 56 38.0425 56 35.3286V10.3911C56 7.67719 53.792 5.46924 51.0781 5.46924ZM22.8594 47.2505H10.3906V37.7349C10.3906 34.2402 12.7226 30.6255 16.625 30.6255C20.5274 30.6255 22.8594 34.2402 22.8594 37.7349V47.2505ZM12.1406 22.8599C12.1406 20.3872 14.1524 18.3755 16.625 18.3755C19.0976 18.3755 21.1094 20.3872 21.1094 22.8599C21.1094 25.3325 19.0976 27.3442 16.625 27.3442C14.1524 27.3442 12.1406 25.3325 12.1406 22.8599ZM52.7188 35.3286C52.7188 36.2333 51.9828 36.9692 51.0781 36.9692H26.1114C25.9504 34.6546 25.0698 32.3939 23.636 30.6701C23.0296 29.941 22.3414 29.3236 21.5899 28.8258C23.2999 27.4001 24.3906 25.2552 24.3906 22.8599C24.3906 18.5779 20.9069 15.0942 16.625 15.0942C12.3431 15.0942 8.85938 18.5779 8.85938 22.8599C8.85938 25.2552 9.95006 27.4001 11.6602 28.8257C10.9086 29.3236 10.2204 29.9409 9.61406 30.67C8.18016 32.3939 7.29969 34.6546 7.13858 36.9692H4.92188C4.01723 36.9692 3.28125 36.2333 3.28125 35.3286V10.3911C3.28125 9.48647 4.01723 8.75049 4.92188 8.75049H51.0781C51.9828 8.75049 52.7188 9.48647 52.7188 10.3911V35.3286Z" fill="black"/>
+									<path d="M47.25 14.2202H38.5C37.5939 14.2202 36.8594 14.9548 36.8594 15.8608C36.8594 16.7669 37.5939 17.5015 38.5 17.5015H47.25C48.1561 17.5015 48.8906 16.7669 48.8906 15.8608C48.8906 14.9548 48.1561 14.2202 47.25 14.2202Z" fill="black"/>
+									<path d="M47.25 21.2192H38.5C37.5939 21.2192 36.8594 21.9538 36.8594 22.8599C36.8594 23.7659 37.5939 24.5005 38.5 24.5005H47.25C48.1561 24.5005 48.8906 23.7659 48.8906 22.8599C48.8906 21.9538 48.1561 21.2192 47.25 21.2192Z" fill="black"/>
+									<path d="M47.25 28.2183H38.5C37.5939 28.2183 36.8594 28.9528 36.8594 29.8589C36.8594 30.765 37.5939 31.4995 38.5 31.4995H47.25C48.1561 31.4995 48.8906 30.765 48.8906 29.8589C48.8906 28.9528 48.1561 28.2183 47.25 28.2183Z" fill="black"/>
+									<path d="M31.5 31.4995C32.4061 31.4995 33.1406 30.765 33.1406 29.8589C33.1406 28.9528 32.4061 28.2183 31.5 28.2183C30.5939 28.2183 29.8594 28.9528 29.8594 29.8589C29.8594 30.765 30.5939 31.4995 31.5 31.4995Z" fill="black"/>
+									<path d="M31.5 24.5005C32.4061 24.5005 33.1406 23.766 33.1406 22.8599C33.1406 21.9538 32.4061 21.2192 31.5 21.2192C30.5939 21.2192 29.8594 21.9538 29.8594 22.8599C29.8594 23.766 30.5939 24.5005 31.5 24.5005Z" fill="black"/>
+									<path d="M31.5 17.5005C32.4061 17.5005 33.1406 16.766 33.1406 15.8599C33.1406 14.9538 32.4061 14.2192 31.5 14.2192C30.5939 14.2192 29.8594 14.9538 29.8594 15.8599C29.8594 16.766 30.5939 17.5005 31.5 17.5005Z" fill="black"/>
+									</svg>
+								</div>
+								<div class="cabinet-main-item-content">
+									<div class="cabinet-main-item-content-title">Иван Иванов</div>
+									<div class="cabinet-main-item-content-desc">
+										<p>Телефон: <b>+7 (777) 777-77-77</b>
+										<p>E-mail: <b>mail@mail.ru</b>
+									</div>
+									<div class="cabinet-main-item-content-links">
+										<a href="#" class="cabinet-main-item-content-link">Посмотреть все данные</a>
+										<a href="#" class="cabinet-main-item-content-link">Выйти</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cabinet-main-col cabinet-main-col-cart flex-row-item">
+						<div class="cabinet-main-item cabinet-main-item-cart">
+							<div class="cabinet-main-item-title">Товары</div>
+							<div class="cabinet-main-item-body">
+								<div class="cabinet-main-item-icon">
+									<svg width="56" height="56"><use xlink:href="#icon-basket"/></svg>
+								</div>
+								<div class="cabinet-main-item-content">
+									<div class="cabinet-main-item-content-title">Корзина</div>
+									<div class="cabinet-main-item-content-desc">У вас нет товаров в корзине</div>
+									<div class="cabinet-main-item-content-links">
+										<a href="#" class="cabinet-main-item-content-link">Подробнее</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<aside class="cabinet-main-sidebar">
+				<div class="cabinet-promo">
+					<div class="cabinet-promo-title">Скидка<br> на первый заказ</div>
+					<div class="cabinet-promo-desc">Вам предоставляется скидка 5% на первый заказ, для этого необходимо при оформлении заказа в поле «Ввести промокод» вставить промокод:</div>
+					<div class="cabinet-promo-code">NEW5-21</div>
+				</div>
+				<a href="#" class="cabinet-main-favorites hidden-mobile">
+					<span class="cabinet-main-favorites-icon">
+						<svg width="48" height="48"><use xlink:href="#icon-like"/></svg>
+					</span>
+					<span class="cabinet-main-favorites-body">
+						<span class="cabinet-main-favorites-title">Избранные товары (15)</span>
+						<span class="cabinet-main-favorites-link">Подробнее</span>
+					</span>
+				</a>
+			</aside>
+		</div>
+	</div>
+</main>
+@@include('footer.html')

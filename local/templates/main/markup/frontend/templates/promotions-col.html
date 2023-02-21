@@ -1,0 +1,16 @@
+<div class="promotions-col flex-row-item">
+	<div class="promotion-item"@@if(context.bg){ style="background-color:@@bg;"}>
+		<a href="#" class="item-link" aria-label="На страницу акции"></a>
+		@@if(context.bg){
+			<div class="promotion-item-date">до 31.03.21</div>
+		}
+		<div class="promotion-item-body">
+			<div class="promotion-item-title">@@title</div>
+			<div class="promotion-item-desc">@@desc</div>
+			<div class="promotion-item-btn">@@btn</div>
+		</div>
+		<div class="promotion-item-img">
+			<img src="img/promotion-item-img-@@img.png" srcset="img/promotion-item-img-@@img@2x.png 2x" alt="">
+		</div>
+	</div>
+</div>

@@ -1,0 +1,137 @@
+@@include('header.html', {
+	"page": "cabinet"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Личный кабинет</a></li>
+			<li><a href="#">Профиль</a></li>
+			<li>Отзывы</li>
+		</ul>
+		@@include('cabinet-nav.html', {
+			"active": "loyalty"
+		})
+		<ul class="cabinet-page-nav tabs-nav-default cabinet-page-nav-loyalty hidden-mobile">
+			<li class="active"><a href="#">Программа лояльности</a></li>
+		</ul>
+		<div class="cabinet cabinet-loyalty cabinet-section">
+			<div class="cabinet-loyalty-body">
+				<div class="cabinet-loyalty-img">
+					<img src="img/cabinet-loyalty.png" srcset="img/cabinet-loyalty@2x.png 2x" alt="">
+				</div>
+				<div class="cabinet-loyalty-content">
+					<div class="cabinet-loyalty-title">Номер бонусный карты 000243</div>
+					<div class="cabinet-loyalty-proggress">
+						<div class="cabinet-loyalty-step">0%</div>
+						<div class="cabinet-loyalty-step">1%</div>
+						<div class="cabinet-loyalty-step">2%</div>
+						<div class="cabinet-loyalty-step">3%</div>
+						<div class="cabinet-loyalty-step active">4%</div>
+						<div class="cabinet-loyalty-step">5%</div>
+						<div class="cabinet-loyalty-step">6%</div>
+						<div class="cabinet-loyalty-step">7%</div>
+						<div class="cabinet-loyalty-step">8%</div>
+						<div class="cabinet-loyalty-step">9%</div>
+						<div class="cabinet-loyalty-step">10%</div>
+					</div>
+					<div class="cabinet-loyalty-proggress-info">
+						<div class="cabinet-loyalty-desc">
+							<div class="cabinet-loyalty-desc-title">Моя скидка:</div>
+							<div class="cabinet-loyalty-desc-data">4%</div>
+						</div>
+						<div class="cabinet-loyalty-desc">
+							<div class="cabinet-loyalty-desc-title">Товаров приобретено на сумму:</div>
+							<div class="cabinet-loyalty-desc-data">8 152 ₽</div>
+						</div>
+					</div>
+				</div>
+				<div class="cabinet-loyalt-info">
+					<ul class="cabinet-loyalt-info-list">
+						<li>
+							<table class="cabinet-loyalt-info-table">
+								<tr>
+									<td>1%</td>
+									<td>-</td>
+									<td>1000 ₽</td>
+								</tr>
+								<tr>
+									<td>2%</td>
+									<td>-</td>
+									<td>2000 ₽</td>
+								</tr>
+								<tr>
+									<td>3%</td>
+									<td>-</td>
+									<td>4000 ₽</td>
+								</tr>
+								<tr>
+									<td>4%</td>
+									<td>-</td>
+									<td>8000 ₽</td>
+								</tr>
+								<tr>
+									<td>5%</td>
+									<td>-</td>
+									<td>16000 ₽</td>
+								</tr>
+							</table>
+						</li>
+						<li>
+							<table class="cabinet-loyalt-info-table">
+								<tr>
+									<td>6%</td>
+									<td>-</td>
+									<td>32000 ₽</td>
+								</tr>
+								<tr>
+									<td>7%</td>
+									<td>-</td>
+									<td>64000 ₽</td>
+								</tr>
+								<tr>
+									<td>8%</td>
+									<td>-</td>
+									<td>128000 ₽</td>
+								</tr>
+								<tr>
+									<td>9%</td>
+									<td>-</td>
+									<td>256000 ₽</td>
+								</tr>
+								<tr>
+									<td>10%</td>
+									<td>-</td>
+									<td>512000 ₽</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+					<div class="cabinet-loyalt-info-desc">Зависимость процента скидки от накопленной суммы в рублях</div>
+				</div>
+			</div>
+			<div class="cabinet-loyalt-how">
+				<div class="cabinet-loyalt-how-title">Как это работает?</div>
+				<div class="cabinet-loyalt-how-row flex-row">
+					<div class="cabinet-loyalt-how-col flex-row-item">
+						<div class="cabinet-loyalt-how-desc">В компании действует программа лояльности для постоянных клиентов. При покупке любых товаров в розничных магазинах или интернет-магазине, сумма в рублях конвертируется в процентую скидку на последующие покупки. Процент скидки зависит от общей суммы приобретенных товаров за весь период после оформления бонусной карты. </div>
+					</div>
+					<div class="cabinet-loyalt-how-col flex-row-item">
+						<div class="cabinet-loyalt-how-desc">Более подробную информацию по программе лояльности можно прочитать здесь: <a href="https://gipermed.com/loyalty/">https://gipermed.com/loyalty/</a></div>
+						<div class="info-alert">
+							<div class="info-alert-icon">
+								<img src="img/alert-icon.svg" alt="">
+							</div>
+							<div class="info-alert-body">
+								<div class="info-alert-desc">
+									<p>Обращаем ваше внимание на то, что скидки начисляются за покупку любого товара, но не суммируются с другими скидками. 
+									<p>Ваша скидка привязана к одному номеру телефона, если вам необходимо сменить его, то обратитесь к менеджеру по телефону: <a href="tel:88003014406">8 800 301-44-06</a>.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+@@include('footer.html')

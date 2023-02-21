@@ -1,0 +1,109 @@
+@@include('header.html', {
+	"page": "brands"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Главная</a></li>
+			<li>Бренды</li>
+		</ul>
+		<h1 class="section-title">Бренды</h1>
+		<div class="brands-info">Компания ЦТМТ «Гипермед» сотрудничает на прямую со множеством производителей и поставщиков по всему миру, что позволяет делать минимальные наценки на продукцию. Мы контролируем качество поставляемой к нам продукции и отсеиваем недобросовестных производителей и поставщиков, чтобы клиентам отгружалась только качественная продукция.</div>
+		<nav class="brands-nav">
+			<ul class="brands-menu">
+				<li><a href="#">A</a></li>
+				<li><a href="#">B</a></li>
+				<li><a href="#">C</a></li>
+				<li><a href="#">D</a></li>
+				<li><a href="#">E</a></li>
+				<li><a href="#">F</a></li>
+				<li><a href="#">G</a></li>
+				<li><a href="#">H</a></li>
+				<li><a href="#">I</a></li>
+				<li><a href="#">J</a></li>
+				<li><a href="#">K</a></li>
+				<li><a href="#">L</a></li>
+				<li><a href="#">M</a></li>
+				<li><a href="#">N</a></li>
+				<li><a href="#">O</a></li>
+				<li><a href="#">P</a></li>
+				<li><a href="#">Q</a></li>
+				<li><a href="#">R</a></li>
+				<li><a href="#">S</a></li>
+				<li><a href="#">T</a></li>
+				<li><a href="#">U</a></li>
+				<li><a href="#">V</a></li>
+				<li><a href="#">W</a></li>
+				<li><a href="#">X</a></li>
+				<li><a href="#">Y</a></li>
+				<li><a href="#">Z</a></li>
+			</ul>
+			<ul class="brands-menu">
+				<li><a href="#">А</a></li>
+				<li><a href="#">б</a></li>
+				<li><a href="#">в</a></li>
+				<li><a href="#">г</a></li>
+				<li><a href="#">д</a></li>
+				<li><a href="#">е</a></li>
+				<li><span>Ё</span></li>
+				<li><span>ж</span></li>
+				<li><a href="#">з</a></li>
+				<li><a href="#">и</a></li>
+				<li><span>й</span></li>
+				<li><a href="#">к</a></li>
+				<li><span>л</span></li>
+				<li><a href="#">м</a></li>
+				<li><a href="#">н</a></li>
+				<li><a href="#">о</a></li>
+				<li><a href="#">п</a></li>
+				<li><a href="#">р</a></li>
+				<li><a href="#">с</a></li>
+				<li><a href="#">т</a></li>
+				<li><span>у</span></li>
+				<li><a href="#">ф</a></li>
+				<li><span>х</span></li>
+				<li><span>ц</span></li>
+				<li><span>ч</span></li>
+				<li><span>ш</span></li>
+				<li><span>щ</span></li>
+				<li><span>ъ</span></li>
+				<li><span>ы</span></li>
+				<li><span>ь</span></li>
+				<li><span>э</span></li>
+				<li><span>ю</span></li>
+				<li><span>я</span></li>
+			</ul>
+		</nav>
+		<div class="brands-row flex-row">
+			@@for(var i = 0; i < 8; i++){
+				@@loop('brands-col.html', [
+					{
+						"img": 1,
+						"title": "ConvaTec"
+					},
+					{
+						"img": 2,
+						"title": "Frebor"
+					},
+					{
+						"img": 3,
+						"title": "Mederen Neotech Ltd"
+					},
+					{
+						"img": 4,
+						"title": "Xiantao Xingrong Protective Products Co., Ltd"
+					},
+					{
+						"img": 5,
+						"title": "Медико-производственная компания Елец"
+					},
+					{
+						"img": 6,
+						"title": "Медико-производственная компания Елец"
+					},
+				])
+			}
+		</div>
+	</div>
+</main>
+@@include('footer.html')

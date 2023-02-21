@@ -1,0 +1,71 @@
+@@include('header.html', {
+	"page": "articles"
+})
+<main class="main">
+	<div class="section">
+		<div class="container">
+			<ul class="breadcrumbs">
+				<li><a href="#">Главная</a></li>
+				<li>Статьи</li>
+			</ul>
+			<h1 class="section-title">Статьи</h1>
+			<div class="articles-row flex-row">
+				@@for(var i = 0; i < 2; i++){
+					@@loop('articles-col.html', [
+						{
+							"img": 1,
+							"title": "Ортопедические подушки, основные критерии выбора."
+						},
+						{
+							"img": 2,
+							"title": "Осанка у ребенка. Как бороться с искривлением позвоночника у детей? Методы решения проблемы."
+						},
+						{
+							"img": 3,
+							"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing eget lectus."
+						},
+						{
+							"img": 4,
+							"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing eget lectus."
+						},
+					])
+				}
+			</div>
+			@@include('pagination.html')
+		</div>
+	</div>
+	<div class="section promotions-section">
+		<div class="container">
+			<div class="section-title">Акции</div>
+			<div class="promotions-row flex-row">
+				@@loop('promotions-col.html', [
+					{
+						"bg": "#A4FFFF",
+						"title": "Антисептик<br> для рук<br> Dezon",
+						"desc": "Скидка 10% при покупке 5 бутылок антисептиков с распылителем производства Dezon",
+						"btn": "Подробнее",
+						"img": 1
+					},
+					{
+						"bg": "#FF97AA",
+						"title": "Антисептик для рук<br> Dezon",
+						"desc": "Скидка 10% при покупке 5 бутылок антисептиков с распылителем производства Dezon",
+						"btn": "Подробнее",
+						"img": 1
+					},
+					{
+						"bg": "#5BC4FF",
+						"title": "Ортопедические подушки",
+						"desc": "При покупке подушек Ortocorrect<br>- 2 наволочки<br> в подарок",
+						"btn": "Получить подарок",
+						"img": 2
+					}
+				])
+			</div>
+			<div class="read-more-btn-wrapp">
+				<a href="#" class="btn read-more-btn">Все акции</a>
+			</div>
+		</div>
+	</div>
+</main>
+@@include('footer.html')

@@ -1,0 +1,66 @@
+@@include('header.html', {
+	"page": "category"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Главная</a></li>
+			<li><a href="#">Категории</a></li>
+			<li><a href="#">Медицинские изделия</a></li>
+			<li>Ортопедические изделия</li>
+		</ul>
+		<div class="catalog-head">
+			<div class="catalog-nav">
+				<div class="catalog-nav-open">
+					<h1 class="section-title">Ортопедические изделия</h1>
+					<i class="visible-tablet"><svg width="24" height="24"><use xlink:href="#icon-chevron-down"/></svg></i>
+				</div>
+				<div class="catalog-menu-mobile visible-tablet">
+					<ul class="catalog-menu-mobile-list">
+						<li><a href="#">Бандажи для беременных</a></li>
+						<li><a href="#">Бандажи и ортезы для верхних конечностей</a></li>
+						<li><a href="#">Бандажи и ортезы для нижних конечностей</a></li>
+						<li><a href="#">Бандажи и ортезы на спину</a></li>
+						<li><a href="#">Бандажи при опущении внутренних органов</a></li>
+						<li><a href="#">Ортопедические стельки, корректоры пальцев</a></li>
+						<li><a href="#">Паховые бандажи</a></li>
+						<li><a href="#">Послеоперационные бандажи</a></li>
+						<li><a href="#">Противогрыжевые бандажи</a></li>
+						<li><a href="#">Пупочные бандажи</a></li>
+						<li><a href="#">Шейные ортезы</a></li>
+					</ul>
+				</div>
+			</div>
+			@@include('catalog-sort.html')
+		</div>
+		<div class="catalog">
+			<aside class="catalog-sidebar">
+				<div class="catalog-menu hidden-tablet">
+					<ul class="catalog-menu-list">
+						<li><a href="#">&#60;&nbsp;Все товары</a></li>
+						<li><a href="#">&#60;&nbsp;Медицинские изделия</a></li>
+						<li>
+							<div class="catalog-menu-nav-current">Ортопедические изделия</div>
+						</li>
+					</ul>
+					<ul class="catalog-menu-list catalog-menu-list-inside">
+						<li><a href="#">Бандажи для беременных</a></li>
+						<li><a href="#">Бандажи и ортезы для верхних конечностей</a></li>
+						<li><a href="#">Бандажи и ортезы для нижних конечностей</a></li>
+						<li><a href="#">Бандажи и ортезы на спину</a></li>
+						<li><a href="#">Бандажи при опущении внутренних органов</a></li>
+						<li><a href="#">Ортопедические стельки, корректоры пальцев</a></li>
+						<li><a href="#">Паховые бандажи</a></li>
+						<li><a href="#">Послеоперационные бандажи</a></li>
+						<li><a href="#">Противогрыжевые бандажи</a></li>
+						<li><a href="#">Пупочные бандажи</a></li>
+						<li><a href="#">Шейные ортезы</a></li>
+					</ul>
+				</div>
+				@@include('catalog-filter.html')
+			</aside>
+			@@include('catalog-body.html')
+		</div>
+	</div>
+</main>
+@@include('footer.html')

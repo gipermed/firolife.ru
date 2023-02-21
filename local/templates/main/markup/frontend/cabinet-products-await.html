@@ -1,0 +1,110 @@
+@@include('header.html', {
+	"page": "cabinet"
+})
+<main class="main">
+	<div class="container">
+		<ul class="breadcrumbs">
+			<li><a href="#">Личный кабинет</a></li>
+			<li><a href="#">Товары</a></li>
+			<li>Лист ожидания</li>
+		</ul>
+		@@include('cabinet-nav.html', {
+			"active": "products"
+		})
+		<ul class="cabinet-page-nav tabs-nav-default">
+			<li><a href="#">Избранное</a></li>
+			<li class="active"><a href="#">Лист ожидания</a></li>
+			<li><a href="#">Корзина</a></li>
+		</ul>
+		<div class="cabinet cabinet-products">
+			<div class="cabinet-section-title">Лист ожидания</div>
+			<div class="catalog-row catalog-row-full products-row flex-row active">
+				@@loop('products-col.html', [
+					{
+						"img": "no",
+						"stiker": {
+							"type": "new",
+							"text": "Новинка"
+						},
+						"title": "Жгут резиновый Эсмарха для оперативной остановки кровотечения<br> Meridian",
+						"cost": "2 088 ₽",
+						"await": true,
+					},
+					{
+						"img": 2,
+						"stiker": {
+							"type": "sale",
+							"text": "Скидка"
+						},
+						"title": "Грелка комбинированная (кружка Эсмарха) 1л<br> Meridian",
+						"sale": true,
+						"cost": "145 ₽",
+						"await": true
+					},
+					{
+						"img": 3,
+						"stiker": {
+							"type": "hit",
+							"text": "Хит"
+						},
+						"title": "Антисептик с распылителем 1 000 мл<br> Дезон",
+						"cost": "547 ₽",
+						"await": true,
+						"state": "expected"
+					},
+					{
+						"img": 1,
+						"title": "Жгут резиновый Эсмарха для оперативной остановки кровотечения<br> Meridian",
+						"cost": "2 088 ₽",
+						"await": true,
+						"state": "expected"
+					},
+					{
+						"img": 1,
+						"title": "Жгут резиновый Эсмарха для оперативной остановки кровотечения<br> Meridian",
+						"cost": "2 088 ₽",
+						"await": true,
+						"state": "expected"
+					},
+				])
+				@@loop('products-col.html', [
+					{
+						"img": "no",
+						"stiker": {
+							"type": "new",
+							"text": "Новинка"
+						},
+						"title": "Жгут резиновый Эсмарха для оперативной остановки кровотечения<br> Meridian",
+						"cost": "2 088 ₽",
+						"await": true,
+						"state": "expected"
+					},
+					{
+						"img": 2,
+						"stiker": {
+							"type": "sale",
+							"text": "Скидка"
+						},
+						"title": "Грелка комбинированная (кружка Эсмарха) 1л<br> Meridian",
+						"sale": true,
+						"cost": "145 ₽",
+						"await": true,
+						"state": "expected"
+					},
+					{
+						"img": 3,
+						"stiker": {
+							"type": "hit",
+							"text": "Хит"
+						},
+						"title": "Антисептик с распылителем 1 000 мл<br> Дезон",
+						"cost": "547 ₽",
+						"await": true,
+						"state": "expected"
+					},
+				])
+			</div>
+		</div>
+	</div>
+</main>
+@@include('footer.html')

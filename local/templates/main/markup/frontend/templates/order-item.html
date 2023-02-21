@@ -1,0 +1,83 @@
+<div class="order-item">
+	<div class="order">
+		<div class="order-head">
+			<div class="order-tr">
+				<div class="order-td order-td-number">Номер заказа</div>
+				<div class="order-td order-td-date">Дата оформления заказа</div>
+				<div class="order-td order-td-payment">Статус оплаты</div>
+				<div class="order-td order-td-delivery">Доставка</div>
+				<div class="order-td order-td-state">Статус заказа</div>
+			</div>
+		</div>
+		<div class="order-body">
+			<div class="order-tr">
+				<div class="order-td order-td-number" data-title="Номер заказа">№3092</div>
+				<div class="order-td order-td-date" data-title="Дата оформления заказа">30/08/2021</div>
+				<div class="order-td order-td-payment" data-title="Статус оплаты">Оплачен</div>
+				<div class="order-td order-td-delivery" data-title="Доставка">
+					ПВЗ СДЕК@@if(context.state.class === 'formed' || context.state.class === 'delivered'){ <br>(дата получения 01-03/09/2021)}
+				</div>
+				<div class="order-td order-td-state" data-title="Статус заказа">
+					<div class="order-state order-state-@@state.class">@@state.text</div>
+				</div>
+				<div class="order-td order-td-total visible-mobile" data-title="Итоговая стоимость заказа">45 023 ₽</div>
+			</div>
+		</div>
+		<div class="order-cart">
+			<div class="order-cart-head">
+				<a href="#" class="order-cart-link item-link" aria-label="Подробнее"></a>
+				<div class="order-cart-head-tr-wrapp">
+					<div class="order-tr order-tr-cart">
+						<div class="order-td order-td-cart-title">Состав заказа</div>
+						<div class="order-td order-td-cart-count">Товары (7)</div>
+						<div class="order-td order-td-cart-sum hidden-mobile">Итого сумма: 5 138 ₽</div>
+					</div>
+				</div>
+				<div class="order-cart-arrow">
+					<svg width="24" height="24"><use xlink:href="#icon-chevron-down"/></svg>
+				</div>
+			</div>
+			<div class="order-cart-body">
+				@@include('ordering-confirm-items.html', {
+					"order": true
+				})
+			</div>
+		</div>
+	</div>
+	<ul class="order-item-btns">
+		@@if(context.state.class === 'formed'){
+			<li class="hidden-tablet">
+				<div class="order-cancel">
+					<a href="#" class="order-cancel-btn btn btn-with-icon">
+						<span>Отменить заказ</span>
+						<svg width="24" height="24"><use xlink:href="#icon-question"/></svg>
+					</a>
+					<div class="order-cancel-tooltip">
+						<svg width="36" height="36"><use xlink:href="#icon-question"/></svg>
+						<div class="order-cancel-tooltip-text">
+							<p>Заказ возможно отменить до статуса «Принят».
+							<p>Если у вас остались вопросы - напишите в службу поддержки на электронную почту: <a href="mailto:order@gipermed.com" target="_blank">order@gipermed.com</a> или свяжитесь с оператором интернет-магазина по телефону: <a href="tel:88003014406">8 800 301-44-06</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="visible-tablet">
+				<a href="#modal-order-cancel" class="order-cancel-btn btn btn-with-icon modal-open-btn">
+					<span>Отменить заказ</span>
+					<svg width="24" height="24"><use xlink:href="#icon-question"/></svg>
+				</a>
+			</li>
+		}
+		<li class="order-repeat-btn-wrapp">
+			<a href="#" class="order-repeat-btn btn btn-with-icon">
+				<span>Повторить заказ</span>
+				<svg width="24" height="24"><use xlink:href="#icon-repeat"/></svg>
+			</a>
+		</li>
+		@@if(context.delete){
+			<li>
+				<a href="#" class="order-del-btn btn">Удалить из заказов</a>
+			</li>
+		}
+	</ul>
+</div>
