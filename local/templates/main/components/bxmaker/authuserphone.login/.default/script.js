@@ -475,6 +475,8 @@ function BXmakerAuthUserphone(b, $) {
                     self.showMsg(r.response.msg);
                     btn.removeClass("preloader");
                     $('.js-phone-masked2').parent().hide();
+                    $('.fio').parent().hide();
+                    $('.email').parent().hide();
                     $('.codeLinkJs').parent().hide();
                     $('.bxmaker-authuserphone-login-msg').hide();
                     $('.beforeSendSms').hide();

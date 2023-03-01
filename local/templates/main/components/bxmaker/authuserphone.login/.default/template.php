@@ -49,6 +49,9 @@ $rand = $arParams['RAND_STRING'];
         <? } ?>
         <? if ($arParams['IS_ENABLED_REGISTER_EMAIL'] == 'Y') {?>
             <div class="cbaup_row bxmaker-authuserphone-login-row bxmaker-authuserphone-login__onlyreg">
+                <input type="text" name="fio" class="fio" placeholder="<? echo \GetMessage($CPN . 'INPUT_FIO'); ?>"/>
+            </div>
+            <div class="cbaup_row bxmaker-authuserphone-login-row bxmaker-authuserphone-login__onlyreg">
                 <input type="text" name="email" class="email" placeholder="<? echo \GetMessage($CPN . 'INPUT_EMAIL'); ?>"/>
             </div>
         <? } ?>

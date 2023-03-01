@@ -6,6 +6,7 @@ $MESS[$CPN . 'BTN_SHOW_PASSWORD'] = 'Показать пароль';
 $MESS[$CPN . 'BTN_HIDE_PASSWORD'] = 'Скрыть пароль';
 $MESS[$CPN . 'INPUT_PHONE'] = 'Номер телефона';
 $MESS[$CPN . 'INPUT_EMAIL'] = 'Email';
+$MESS[$CPN . 'INPUT_FIO'] = 'ФИО';
 $MESS[$CPN . 'INPUT_LOGIN'] = 'Логин';
 $MESS[$CPN . 'INPUT_PASSWORD_OR_SMS_CODE'] = 'Пароль или код из смс';
 $MESS[$CPN . 'INPUT_SMS_CODE'] = 'Код из смс';

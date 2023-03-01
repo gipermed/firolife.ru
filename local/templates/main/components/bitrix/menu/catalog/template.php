@@ -12,8 +12,8 @@
     $db_list = CIBlockSection::GetList(Array(), $arFilter, true, array('ID','NAME','CODE','SECTION_PAGE_URL'));
     while($ar_result = $db_list->GetNext()) {
         $arSelect = Array("ID", "NAME", "DATE_ACTIVE_FROM");
-        $arFilter = Array("IBLOCK_ID"=>IBLOCK_CATALOG_ID, "SECTION_ID"=>$ar_result['ID'], "INCLUDE_SUBSECTIONS"=>"Y", "ACTIVE"=>"Y", ">CATALOG_QUANTITY"=>0);
-        $res = CIBlockElement::GetList(Array(), $arFilter, false, Array("nPageSize"=>1), $arSelect);
+        $arFilter = Array("IBLOCK_ID"=>IBLOCK_CATALOG_ID, "SECTION_ID"=>$ar_result['ID'], "INCLUDE_SUBSECTIONS"=>"Y", "AVAILABLE"=>"N", ">CATALOG_QUANTITY"=>0);
+        $res = CCatalogProduct::GetList(Array(), $arFilter, false, Array("nPageSize"=>1), $arSelect);
         while($ob = $res->Fetch()) {
             if($ob){
                 $allSections[str_replace('/','',$ar_result['SECTION_PAGE_URL'])] = $ar_result['ELEMENT_CNT'];
